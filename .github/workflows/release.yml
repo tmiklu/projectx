@@ -22,9 +22,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: install uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          
       - name: Bump and Change log
         run: |
           uv run cz bump --yes
+
       - name: Create GitHub Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
