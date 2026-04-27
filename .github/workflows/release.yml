@@ -1,6 +1,14 @@
 name: Create Release
 
 on:
+  workflow_dispatch:
+    inputs:
+      package:
+        description: "Which slug to release"
+        type: choice
+        options:
+          - orchestrator
+        default: orchestrator
   push:
     branches:
       - 'release/*'
