@@ -2,7 +2,7 @@ name: Create Release
 
 on:
   push:
-    branch:
+    branches:
       - 'release/*'
 
 jobs:
@@ -14,10 +14,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Bump and Change log
+        run: |
+          uv run cz bump --yes
       - name: Create GitHub Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          TAG=$(uv run cz version --project)
           gh release create ${{ github.ref_name }} \
-            --title "Release ${{ github.ref_name }}" \
+            --title "$TAG" \
             --generate-notes
