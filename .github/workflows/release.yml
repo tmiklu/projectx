@@ -48,6 +48,7 @@ jobs:
           uv run cz bump --yes
 
       - name: Push commits with tags
+        if: ${{ inputs.dry-run == false }}
         run: | 
           git push && git push --tags
 
