@@ -40,8 +40,7 @@ jobs:
       - name: Bump, Create Changelog and push with tags
         run: |
           uv run cz bump --yes
-          git push
-          git push --tags
+          git push --follow-tags
 
       - name: Create GitHub Release
         env:
