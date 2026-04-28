@@ -11,7 +11,7 @@ on:
         default: orchestrator
   push:
     branches:
-      - release/\d+.\d+.\d+
+      - 'release/*'
 
 jobs:
   release:
