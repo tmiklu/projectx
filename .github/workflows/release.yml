@@ -44,7 +44,8 @@ jobs:
       - name: Bump, Create Changelog and push with tags
         #if: ${{ inputs.dry-run != true }}
         run: |
-          if [[ "${{ inputs.dry-run }}" ]]; then
+          DRY_RUN_BOOL="${{ inputs.dry-run }}"
+          if [[ "$DRY_RUN_BOOL" == "true" ]]; then
             echo "true"
             uv run cz bump --dry-run
           else
