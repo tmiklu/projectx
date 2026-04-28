@@ -11,7 +11,7 @@ on:
         default: orchestrator
   push:
     branches:
-      - release/\d+.\d+.\d
+      - release/\d+.\d+.\d+
 
 jobs:
   release:
@@ -33,7 +33,7 @@ jobs:
             git config --global user.email "tomas.miklusicak@cloudops.sk"
             git config --global user.name "tmiklu"
           
-      - name: Bump and Change log
+      - name: Bump and create Changelog
         run: |
           uv run cz bump --yes
 
@@ -43,7 +43,9 @@ jobs:
         shell: bash
         run: |
           TAG=$(uv run cz version --project)
-          cat CHANGELOG.md | grep "^## $VERSION (\d*\-\d*\-\d*)" > release.md                                    
+          ls -lha
+          whereis cat
+          #cat CHANGELOG.md | grep "^## $VERSION (\d*\-\d*\-\d*)" > release.md                                    
           awk "/## $VERSION/{flag=1;next}/## [0-9]+/{flag=0}flag" CHANGELOG.md >> release.md
           #gh release create ${{ github.ref_name }} \
           #  --title "$TAG" \
