@@ -3,8 +3,12 @@ name: Create Release
 on:
   workflow_dispatch:
     inputs:
+      dry-run:
+        description: 'Create Changelog to stdout'
+        required: false
+        type: boolean
       package:
-        description: "Which slug to release"
+        description: 'Which slug to release'
         type: choice
         options:
           - orchestrator
