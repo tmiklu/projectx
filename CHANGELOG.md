@@ -1,3 +1,10 @@
+## 0.6.0 (2026-04-28)
+
+### Feat
+
+- **main.py**: Fix typo in new login form message
+- **main.py**: Add new print statement for login form
+
 ## 0.5.0 (2026-04-28)
 
 ### Feat
