@@ -43,8 +43,8 @@ jobs:
         shell: bash
         run: |
           TAG=$(uv run cz version --project)
-          egrep "^## $VERSION \(\d{4}\-\d{2}-\d{2}\)$" CHANGELOG.md > release.md                                    
-          #awk "/## $VERSION/{flag=1;next}/## [0-9]+/{flag=0}flag" CHANGELOG.md >> release.md
+          grep "^## $VERSION (\d*\-\d*\-\d*)" CHANGELOG.md > release.md                                    
+          awk "/## $VERSION/{flag=1;next}/## [0-9]+/{flag=0}flag" CHANGELOG.md >> release.md
           #gh release create ${{ github.ref_name }} \
           #  --title "$TAG" \
             #--generate-notes
