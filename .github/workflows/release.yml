@@ -39,10 +39,6 @@ jobs:
           git add CHANGELOG.md
           git push
 
-      - name: Merge to main
-        run: |
-          git merge main
-
       - name: Create GitHub Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -51,7 +47,7 @@ jobs:
           TAG=$(uv run cz version --project)
           grep "^## $TAG" CHANGELOG.md > release.md                                    
           awk "/## $TAG/{flag=1;next}/## [0-9]+/{flag=0}flag" CHANGELOG.md >> release.md
-          #gh release create ${{ github.ref_name }} \
-          #  --title "$TAG" \
+          gh release create ${{ github.ref_name }} \
+            --title "$TAG" \
             #--generate-notes
-          #  --notes-file release.md
+            --notes-file release.md
