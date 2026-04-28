@@ -1,3 +1,13 @@
+## 0.3.0 (2026-04-28)
+
+### Feat
+
+- **main.py**: Add login feature print statement
+
+### Fix
+
+- **main.py**: Correct typo in contact form print statement
+
 ## 0.2.0 (2026-04-28)
 
 ### Feat
