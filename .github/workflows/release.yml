@@ -47,6 +47,7 @@ jobs:
           if [[ "${{ inputs.dry-run }}" ]]; then
             uv run cz bump --dry-run
           else
+            echo "milan"
             #uv run cz bump --yes
             #git push --follow-tags
           fi
