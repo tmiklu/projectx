@@ -1,3 +1,9 @@
+## 0.4.0 (2026-04-28)
+
+### Feat
+
+- **main.py**: Add SSO login feature to main.py
+
 ## 0.3.0 (2026-04-28)
 
 ### Feat
