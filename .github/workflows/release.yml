@@ -52,7 +52,7 @@ jobs:
           else
             TAG=$(uv run cz version --project)
             uv run cz bump --yes
-            git push --atomic origin "$BRANCH_NAME" "$TAG"
+            git push && git push --tags
           fi
 
       - name: Create GitHub Release
