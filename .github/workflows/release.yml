@@ -33,7 +33,7 @@ jobs:
             git config --global user.email "tomas.miklusicak@cloudops.sk"
             git config --global user.name "tmiklu"
           
-      - name: Bump and create Changelog
+      - name: Bump, Create Changelog and push with tags
         run: |
           uv run cz bump --yes
           git add pyproject.toml CHANGELOG.md uv.lock
