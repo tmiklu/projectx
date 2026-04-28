@@ -43,7 +43,7 @@ jobs:
         shell: bash
         run: |
           TAG=$(uv run cz version --project)
-          grep "^## $VERSION (\d*\-\d*\-\d*)" CHANGELOG.md > release.md                                    
+          cat CHANGELOG.md | grep "^## $VERSION (\d*\-\d*\-\d*)" > release.md                                    
           awk "/## $VERSION/{flag=1;next}/## [0-9]+/{flag=0}flag" CHANGELOG.md >> release.md
           #gh release create ${{ github.ref_name }} \
           #  --title "$TAG" \
