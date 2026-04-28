@@ -36,8 +36,9 @@ jobs:
       - name: Bump and create Changelog
         run: |
           uv run cz bump --yes
-          #git add CHANGELOG.md
-          #git push
+          git add .
+          git push
+          git push --tags
 
       - name: Create GitHub Release
         env:
