@@ -41,19 +41,19 @@ jobs:
         run: |
           git fetch --tags
 
-      - name: Bump, Create Changelog and push with tags
+      - name: Dry run changelog
+        if: ${{ inputs.dry-run == true }}
         run: |
-          DRY_RUN_BOOL="${{ inputs.dry-run }}"
-          if [[ "$DRY_RUN_BOOL" == "true" ]]; then
-            uv run cz bump --dry-run
-          else
-            TAG=$(uv run cz version --project)
-            uv run cz bump --yes
-            git push && git push --tags
-          fi
+          uv run cz bump --dry-run
+        
+      - name: Bump, Create Changelog and push with tags
+        if: ${{ inputs.dry-run == false }}
+        run: |
+          uv run cz bump --yes
+          git push && git push --tags
 
       - name: Create GitHub Release
-        if: ${{ inputs.dry-run != true }}
+        if: ${{ inputs.dry-run == false }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
