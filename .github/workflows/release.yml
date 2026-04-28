@@ -44,4 +44,5 @@ jobs:
           TAG=$(uv run cz version --project)
           gh release create ${{ github.ref_name }} \
             --title "$TAG" \
-            --notes-file CHANGELOG.md
+            --generate-notes
+            #--notes-file CHANGELOG.md
