@@ -36,7 +36,7 @@ jobs:
       - name: Bump and create Changelog
         run: |
           uv run cz bump --yes
-          git add .
+          git add pyproject.toml CHANGELOG.md uv.lock
           git push
           git push --tags
 
