@@ -32,7 +32,11 @@ jobs:
         run: |
             git config --global user.email "tomas.miklusicak@cloudops.sk"
             git config --global user.name "tmiklu"
-          
+            
+      - name: Ensure tags are present
+        run: |
+          git fetch --tags
+
       - name: Bump, Create Changelog and push with tags
         run: |
           uv run cz bump --yes
