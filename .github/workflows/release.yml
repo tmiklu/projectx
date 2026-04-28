@@ -26,8 +26,8 @@ jobs:
 
       - name: Ensure correct release branch
         run: |
-          at="release\/\d\.\d\.\d"
-          if [[ $GITHUB_REF_NAME =~ $pat ]]; then
+          BRANCH_POLICY="release\/\d\.\d\.\d"
+          if [[ $GITHUB_REF_NAME =~ $BRANCH_POLICY ]]; then
             echo Correct!
           else
             exit 1
