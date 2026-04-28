@@ -49,5 +49,4 @@ jobs:
           awk "/## $TAG/{flag=1;next}/## [0-9]+/{flag=0}flag" CHANGELOG.md >> release.md
           gh release create ${{ github.ref_name }} \
             --title "$TAG" \
-            #--generate-notes
             --notes-file release.md
