@@ -38,7 +38,7 @@ jobs:
         run: |
           uv run cz bump --yes
           git add CHANGELOG.md
-          git push HEAD
+          git push
           git status
           
 
