@@ -27,6 +27,11 @@ jobs:
       - name: install uv
         run: |
           curl -LsSf https://astral.sh/uv/install.sh | sh
+
+      - name: Set git identity
+        run: |
+            git config --global user.email "tomas.miklusicak@cloudops.sk"
+            git config --global user.name "tmiklu"
           
       - name: Bump and Change log
         run: |
