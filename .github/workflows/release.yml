@@ -36,6 +36,7 @@ jobs:
         run: |
             git config --global user.email "tomas.miklusicak@cloudops.sk"
             git config --global user.name "tmiklu"
+            git config --global push.followTags true
             
       - name: Ensure tags are present
         run: |
@@ -50,7 +51,7 @@ jobs:
         if: ${{ inputs.dry-run == false }}
         run: |
           uv run cz bump --yes
-          git push && git push --tags
+          git push --follow-tags
 
       - name: Create GitHub Release
         if: ${{ inputs.dry-run == false }}
