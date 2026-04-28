@@ -42,7 +42,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           TAG=$(uv run cz version --project)
+          awk "/## $VERSION/{flag=1;next}/## [0-9]+/{flag=0}flag" CHANGELOG.md > release.md
           gh release create ${{ github.ref_name }} \
             --title "$TAG" \
             #--generate-notes
-            --notes-file CHANGELOG.md
+            --notes-file release.md
