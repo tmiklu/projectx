@@ -6,6 +6,7 @@ def main():
     print("add sso login for system.")
     print("add email contact.")
     print("add calendar option.")
+    print("new login form!")
 
 
 if __name__ == "__main__":
