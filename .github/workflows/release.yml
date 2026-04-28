@@ -26,7 +26,11 @@ jobs:
 
       - name: Ensure correct release branch
         run: |
-          env
+          at="release\/\d\.\d\.\d"
+          if [[ $GITHUB_REF_NAME =~ $pat ]]; then
+            echo Correct!
+          else
+            exit 1
 
       - name: install uv
         run: |
