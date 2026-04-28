@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       dry-run:
-        description: 'Create Changelog to stdout'
+        description: 'Dry run - Create Changelog to stdout'
         required: false
         type: boolean
       package:
