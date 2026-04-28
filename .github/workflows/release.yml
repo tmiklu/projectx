@@ -42,10 +42,14 @@ jobs:
           git fetch --tags
 
       - name: Bump, Create Changelog and push with tags
-        if: ${{ inputs.dry-run != true }}
+        #if: ${{ inputs.dry-run != true }}
         run: |
-          uv run cz bump --yes
-          git push --follow-tags
+          if [[ "${{ inputs.dry-run }}" ]]; then
+            uv run cz bump --dry-run
+          else
+            #uv run cz bump --yes
+            #git push --follow-tags
+          fi
 
       - name: Create GitHub Release
         if: ${{ inputs.dry-run != true }}
