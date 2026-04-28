@@ -42,16 +42,13 @@ jobs:
           git fetch --tags
 
       - name: Bump, Create Changelog and push with tags
-        #if: ${{ inputs.dry-run != true }}
         run: |
           DRY_RUN_BOOL="${{ inputs.dry-run }}"
           if [[ "$DRY_RUN_BOOL" == "true" ]]; then
-            echo "true"
             uv run cz bump --dry-run
           else
-            echo "milan"
-            #uv run cz bump --yes
-            #git push --follow-tags
+            uv run cz bump --yes
+            git push --follow-tags
           fi
 
       - name: Create GitHub Release
