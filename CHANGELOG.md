@@ -1,3 +1,10 @@
+## 0.5.0 (2026-04-28)
+
+### Feat
+
+- **main.py**: Add calendar option to main.py
+- **main.py**: Add email contact feature
+
 ## 0.4.0 (2026-04-28)
 
 ### Feat
