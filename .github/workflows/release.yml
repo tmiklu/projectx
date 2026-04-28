@@ -45,6 +45,7 @@ jobs:
         #if: ${{ inputs.dry-run != true }}
         run: |
           if [[ "${{ inputs.dry-run }}" ]]; then
+            echo "true"
             uv run cz bump --dry-run
           else
             echo "milan"
