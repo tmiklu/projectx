@@ -25,6 +25,7 @@ jobs:
           fetch-depth: 0
 
       - name: Ensure correct release branch
+        shell: bash
         run: |
           BRANCH_POLICY="release\/\d\.\d\.\d"
           if [[ $GITHUB_REF_NAME =~ $BRANCH_POLICY ]]; then
