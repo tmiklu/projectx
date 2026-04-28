@@ -32,11 +32,13 @@ jobs:
         run: |
             git config --global user.email "tomas.miklusicak@cloudops.sk"
             git config --global user.name "tmiklu"
+            git checkout release/0.5.0
           
       - name: Bump and create Changelog
         run: |
           uv run cz bump --yes
           git status
+          
 
       - name: Create GitHub Release
         env:
