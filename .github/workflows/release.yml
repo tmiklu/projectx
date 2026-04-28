@@ -38,7 +38,6 @@ jobs:
           uv run cz bump --yes
           git add CHANGELOG.md
           git push
-          git status
 
       - name: Merge to main
         run: |
