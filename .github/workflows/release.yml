@@ -17,6 +17,9 @@ on:
     branches:
       - 'release/*'
 
+env:
+  BRANCH_NAME: ${{ github.ref_name }}
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -47,8 +50,9 @@ jobs:
           if [[ "$DRY_RUN_BOOL" == "true" ]]; then
             uv run cz bump --dry-run
           else
+            TAG=$(uv run cz version --project)
             uv run cz bump --yes
-            git push --follow-tags
+            git push --atomic origin "$BRANCH_NAME" "$TAG"
           fi
 
       - name: Create GitHub Release
