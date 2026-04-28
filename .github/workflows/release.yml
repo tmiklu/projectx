@@ -31,6 +31,7 @@ jobs:
             echo Correct!
           else
             exit 1
+          fi
 
       - name: install uv
         run: |
