@@ -37,10 +37,7 @@ jobs:
             git config --global user.email "tomas.miklusicak@cloudops.sk"
             git config --global user.name "tmiklu"
             git config --global push.followTags true
-            
-      - name: Ensure tags are present
-        run: |
-          git fetch --tags
+
 
       - name: Dry run changelog
         if: ${{ inputs.dry-run == true }}
@@ -53,7 +50,9 @@ jobs:
           uv run cz bump --yes
 
       - name: Push commits with tags
-        run: git push --follow-tags
+        run: | 
+          git push --follow-tags
+          git fetch --tags
 
       - name: Create GitHub Release
         if: ${{ inputs.dry-run == false }}
