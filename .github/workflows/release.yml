@@ -13,6 +13,15 @@ on:
         options:
           - orchestrator
         default: orchestrator
+      increment:
+          description: "Choose version bump strategy: AUTO (based on commits), or force MAJOR, MINOR, or PATCH increment."
+        type: choice
+        options:
+          - AUTO
+          - MAJOR
+          - MINOR
+          - PATCH
+        default: AUTO
   push:
     branches:
       - 'release/*'
