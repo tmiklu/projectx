@@ -27,11 +27,8 @@ on:
       - 'release/*'
 
 jobs:
-  release:
+  init:
     runs-on: ubuntu-latest
-    environment: release
-    permissions:
-      contents: write # Required to create the release
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -56,7 +53,13 @@ jobs:
           else
             uv run cz bump --increment "$INC" --dry-run
           fi
-      
+
+  release:
+    runs-on: ubuntu-latest
+    environment: release
+    permissions:
+      contents: write
+    steps:
       - name: Bump and Create Changelog
         if: ${{ inputs.dry-run == false }}
         run: |
