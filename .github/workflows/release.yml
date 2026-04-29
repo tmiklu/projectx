@@ -56,12 +56,6 @@ jobs:
           else
             uv run cz bump --increment "$INC" --dry-run
           fi
-
-      - uses: trstringer/manual-approval@v1
-        with:
-          secret: ${{ github.TOKEN }}
-          approvers: tmiklu
-          minimum-approvals: 1
       
       - name: Bump and Create Changelog
         if: ${{ inputs.dry-run == false }}
