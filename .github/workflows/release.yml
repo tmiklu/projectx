@@ -56,7 +56,7 @@ jobs:
         if: ${{ inputs.dry-run == false }}
         run: |
           INC=${{ inputs.increment }}
-          if [[ "$INC" == "AUTO" ]]
+          if [[ "$INC" == "AUTO" ]]; then
             uv run cz bump --yes --dry-run
           else:
             uv run cz bump --increment "$INC" --dry-run
