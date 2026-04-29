@@ -44,8 +44,8 @@ jobs:
             git config --global user.email "tomas.miklusicak@cloudops.sk"
             git config --global user.name "tmiklu"
 
-      - name: Dry run changelog
-        if: ${{ inputs.dry-run == true }}
+      - name: Dry run, output changelog to stdout
+        #if: ${{ inputs.dry-run == true }}
         run: |
           INC=${{ inputs.increment }}
           if [[ "$INC" == "AUTO" ]]; then
