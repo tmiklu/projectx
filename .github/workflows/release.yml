@@ -14,7 +14,7 @@ on:
           - orchestrator
         default: orchestrator
       increment:
-          description: "Choose version bump strategy: AUTO (based on commits), or force MAJOR, MINOR, or PATCH increment."
+        description: "Choose version bump strategy: AUTO (based on commits), or force MAJOR, MINOR, or PATCH increment."
         type: choice
         options:
           - AUTO
