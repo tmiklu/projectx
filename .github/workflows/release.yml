@@ -50,10 +50,10 @@ jobs:
           INC=${{ inputs.increment }}
           if [[ "$INC" == "AUTO" ]]; then
             uv run cz bump --yes --dry-run
-            uv run cz version --project
+            uv run cz bump --get-next --dry-run
           else
             uv run cz bump --increment "$INC" --dry-run
-            uv run cz version --project
+            uv run cz bump --get-next --dry-run
           fi
 
   release:
