@@ -63,6 +63,11 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - name: install uv
         run: |
           curl -LsSf https://astral.sh/uv/install.sh | sh
