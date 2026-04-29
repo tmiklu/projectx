@@ -57,9 +57,19 @@ jobs:
   release:
     runs-on: ubuntu-latest
     environment: release
+    needs: init
     permissions:
       contents: write
     steps:
+      - name: install uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+
+      - name: Set git identity
+        run: |
+            git config --global user.email "tomas.miklusicak@cloudops.sk"
+            git config --global user.name "tmiklu"
+
       - name: Bump and Create Changelog
         if: ${{ inputs.dry-run == false }}
         run: |
