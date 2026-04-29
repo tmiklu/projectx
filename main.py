@@ -7,6 +7,7 @@ def main():
     print("add email contact.")
     print("add calendar option.")
     print("new login form, extended!")
+    print("add spam protection.")
 
 
 if __name__ == "__main__":
