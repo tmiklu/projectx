@@ -1,3 +1,9 @@
+## 0.7.0 (2026-04-29)
+
+### Feat
+
+- **main.py**: Add spam protection feature to the login system
+
 ## 0.6.0 (2026-04-28)
 
 ### Feat
