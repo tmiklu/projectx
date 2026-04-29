@@ -1,3 +1,9 @@
+## 1.0.1 (2026-04-29)
+
+### Fix
+
+- **main.py**: Fix typo in calendar option print statement
+
 ## 1.0.0 (2026-04-29)
 
 ### BREAKING CHANGE
