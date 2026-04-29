@@ -50,16 +50,21 @@ jobs:
       - name: Dry run changelog
         if: ${{ inputs.dry-run == true }}
         run: |
-          uv run cz bump --dry-run
+          INC=${{ inputs.increment }}
+          if [[ "$INC" == "AUTO" ]]; then
+            uv run cz bump --yes --dry-run
+          else:
+            uv run cz bump --increment "$INC" --dry-run
+          fi
         
       - name: Bump and Create Changelog
         if: ${{ inputs.dry-run == false }}
         run: |
           INC=${{ inputs.increment }}
           if [[ "$INC" == "AUTO" ]]; then
-            uv run cz bump --yes --dry-run
+            uv run cz bump --yes
           else:
-            uv run cz bump --increment "$INC" --dry-run
+            uv run cz bump --increment "$INC"
           fi
 
       - name: Push commits with tags
