@@ -83,7 +83,7 @@ jobs:
           INC=${{ inputs.increment }}
           if [[ "$INC" == "AUTO" ]]; then
             uv run cz bump --yes
-          else:
+          else
             uv run cz bump --increment "$INC"
           fi
 
