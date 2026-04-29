@@ -1,3 +1,13 @@
+## 1.0.0 (2026-04-29)
+
+### BREAKING CHANGE
+
+- new release
+
+### Feat
+
+- **main.py**: new major release
+
 ## 0.8.0 (2026-04-29)
 
 ### Feat
