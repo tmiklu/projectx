@@ -1,3 +1,10 @@
+## 0.8.0 (2026-04-29)
+
+### Feat
+
+- **main.py**: another breaking change
+- **main.py**: add breaking change
+
 ## 0.7.0 (2026-04-29)
 
 ### Feat
