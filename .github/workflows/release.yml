@@ -55,6 +55,8 @@ jobs:
           fi
 
   release:
+    env:
+      GITHUB_TOKEN: ${{ secrets.TOKEN }}
     runs-on: ubuntu-latest
     environment: release
     needs: init
