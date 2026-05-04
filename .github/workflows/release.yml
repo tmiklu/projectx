@@ -27,7 +27,7 @@ on:
       - 'release/*'
 
 jobs:
-  init:
+  generate-release-log:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -45,7 +45,7 @@ jobs:
             git config --global user.name "tmiklu"
 
       - name: Dry run, output changelog to stdout
-        if: ${{ inputs.dry-run == true }}
+        #if: ${{ inputs.dry-run == true }}
         run: |
           INC=${{ inputs.increment }}
           if [[ "$INC" == "AUTO" ]]; then
@@ -61,7 +61,7 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.TOKEN }}
     runs-on: ubuntu-latest
     environment: release
-    needs: init
+    needs: generate-release-log
     permissions:
       contents: write
     steps:
