@@ -4,7 +4,7 @@ def main():
     print("login feature.")
     print("contact form, fix typo in form")
     print("add sso login for system.")
-    print("add email contact.")
+    print("add email contact, extend feature.")
     print("add calendar option. Fix!")
     print("new login form, extended!")
     print("add spam protection.")
