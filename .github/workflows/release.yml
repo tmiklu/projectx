@@ -45,7 +45,7 @@ jobs:
             git config --global user.name "tmiklu"
 
       - name: Dry run, output changelog to stdout
-        #if: ${{ inputs.dry-run == true }}
+        if: ${{ inputs.dry-run == true }}
         run: |
           INC=${{ inputs.increment }}
           if [[ "$INC" == "AUTO" ]]; then
