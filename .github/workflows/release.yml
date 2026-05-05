@@ -53,11 +53,11 @@ jobs:
           INC=${{ inputs.increment }}
           DRY_RUN="${{ inputs.dry-run == true }}"
           if [[ "$DRY_RUN" == "true" ]] ; then
-            echo here
+            echo dry-run
             uv run cz bump --yes --dry-run
           fi
           if [[ "$INC" == "AUTO" ]]; then
-            echo here1
+            echo AUTO
             uv run cz bump --yes --dry-run
           else
             uv run cz bump --increment "$INC" --dry-run
@@ -81,10 +81,10 @@ jobs:
         run: |
           curl -LsSf https://astral.sh/uv/install.sh | sh
 
-      - name: Set git identity
-        run: |
-            git config --global user.email "tomas.miklusicak@cloudops.sk"
-            git config --global user.name "tmiklu"
+      #- name: Set git identity
+      #  run: |
+      #      git config --global user.email "tomas.miklusicak@cloudops.sk"
+      #      git config --global user.name "tmiklu"
 
       - name: Bump and Create Changelog
         if: ${{ inputs.dry-run == false }}
