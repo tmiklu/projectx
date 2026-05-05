@@ -9,7 +9,7 @@ def main():
     print("new login form, extended!")
     print("add spam protection. FIX!")
     print("this is breaking change..., fix!")
-    print("another breaking change, extend this feature!!!")
+    print("another breaking change, extend this feature!!! Fix here.")
 
 
 if __name__ == "__main__":
