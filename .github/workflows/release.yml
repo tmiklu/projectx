@@ -48,9 +48,11 @@ jobs:
         run: |
           INC=${{ inputs.increment }}
           if [[ ${{ inputs.dry-run == true }} ]] ; then
+            echo here
             uv run cz bump --yes --dry-run
           fi
           if [[ "$INC" == "AUTO" ]]; then
+            echo here1
             uv run cz bump --yes --dry-run
           else
             uv run cz bump --increment "$INC" --dry-run
