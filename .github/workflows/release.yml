@@ -45,9 +45,10 @@ jobs:
             git config --global user.name "tmiklu"
 
       - name: Dry run, output changelog to stdout
-        #if: ${{ inputs.dry-run == true }}
         run: |
           INC=${{ inputs.increment }}
+          if [[ ${{ inputs.dry-run == true }} ]] ; then
+            uv run cz bump --yes --dry-run
           if [[ "$INC" == "AUTO" ]]; then
             uv run cz bump --yes --dry-run
           else
