@@ -4,12 +4,12 @@ def main():
     print("login feature.")
     print("contact form, fix typo in form")
     print("add sso login for system.")
-    print("add email contact.")
+    print("add email contact, extend feature.")
     print("add calendar option. Fix!")
     print("new login form, extended!")
-    print("add spam protection.")
-    print("this is breaking change...")
-    print("another breaking change!!! Fix here!")
+    print("add spam protection. FIX!")
+    print("this is breaking change..., fix!")
+    print("another breaking change, extend this feature!!!")
 
 
 if __name__ == "__main__":

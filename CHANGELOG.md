@@ -1,3 +1,20 @@
+## 1.2.0 (2026-05-04)
+
+### Feat
+
+- Refactor breaking change message in main.py
+
+### Fix
+
+- Fix message for breaking change notification
+- Fix spam protection message in main.py
+
+## 1.1.0 (2026-05-04)
+
+### Feat
+
+- Update email contact print statement for clarity
+
 ## 1.0.1 (2026-04-29)
 
 ### Fix
