@@ -8,7 +8,7 @@ def main():
     print("add calendar option. Fix!")
     print("new login form, extended!")
     print("add spam protection. FIX!")
-    print("this is breaking change..., fix!")
+    print("this is breaking change..., fix! Feature!")
     print("another breaking change, extend this feature!!! Fix here.")
 
 
