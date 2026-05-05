@@ -28,9 +28,10 @@ on:
 
 env:
   #GIT_AUTHOR_EMAIL: "tomas.miklusicak@cloudops.sk"
-  #GIT_AUTHOR_NAME: "tmiklu"
+  GIT_AUTHOR_NAME: "tmiklu"
   GIT_COMMITTER_NAME: "tmiklu"
-  GIT_COMMITTER_EMAIL: "tomas.miklusicak@cloudops.sk"
+  #GIT_COMMITTER_EMAIL: "tomas.miklusicak@cloudops.sk"
+  EMAIL: "tomas.miklusicak@cloudops.sk"
 
 jobs:
   generate-release-log:
