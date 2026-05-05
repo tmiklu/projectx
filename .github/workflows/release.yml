@@ -47,7 +47,8 @@ jobs:
       - name: Dry run, output changelog to stdout
         run: |
           INC=${{ inputs.increment }}
-          if [[ ${{ inputs.dry-run == true }} ]] ; then
+          DRY_RUN="${{ inputs.dry-run == true }}"
+          if [[ "$DRY_RUN" == "true" ]] ; then
             echo here
             uv run cz bump --yes --dry-run
           fi
