@@ -1,3 +1,9 @@
+## 1.3.0 (2026-05-05)
+
+### Feat
+
+- Update breaking change message for clarity
+
 ## 1.2.1 (2026-05-05)
 
 ### Fix
