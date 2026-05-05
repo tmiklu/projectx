@@ -1,3 +1,10 @@
+## 1.2.1 (2026-05-05)
+
+### Fix
+
+- message for breaking change in main.py
+- Fix message for another breaking change
+
 ## 1.2.0 (2026-05-04)
 
 ### Feat
