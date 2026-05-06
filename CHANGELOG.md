@@ -1,3 +1,9 @@
+## 1.3.1 (2026-05-06)
+
+### Fix
+
+- Clarify contact form typo fix message
+
 ## 1.3.0 (2026-05-05)
 
 ### Feat
