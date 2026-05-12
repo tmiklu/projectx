@@ -11,7 +11,7 @@ def main():
     print("this is breaking change..., fix! Feature!")
     print("another breaking change, extend this feature!!! Fix here.")
 
-    print("New feature 2.0.0")
+    print("New feature 1.6.0")
 
     print("Extend new feature")
 
