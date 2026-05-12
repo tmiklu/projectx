@@ -22,9 +22,9 @@ on:
           - MINOR
           - PATCH
         default: AUTO
-  push:
-    branches:
-      - 'release/*'
+  #push:
+  #  branches:
+  #    - 'release/*'
 
 env:
   GIT_AUTHOR_NAME: "tmiklu"
