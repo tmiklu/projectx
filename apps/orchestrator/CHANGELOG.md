@@ -1,3 +1,10 @@
+## 1.5.0 (2026-05-12)
+
+### Feat
+
+- Extend new feature with additional print statement
+- Add print statement for new feature 2.0.0
+
 ## 1.4.0 (2026-05-12)
 
 ### Fix
