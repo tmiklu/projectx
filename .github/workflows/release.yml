@@ -23,6 +23,10 @@ on:
           - MINOR
           - PATCH
         default: AUTO
+      validate-commit:
+        description: 'Validate the latest N commit messages:'
+        type: number
+        default: 0
   #push:
   #  branches:
   #    - 'release/*'
@@ -49,10 +53,13 @@ jobs:
         run: |
           curl -LsSf https://astral.sh/uv/install.sh | sh
 
-      - name: Validate commits from default branch to HEAD
+      - name: Validate $NUMBER_OF_COMMIT commits to HEAD
+        if: ${{ inputs.validate-commit != 0 }}
+        env:
+          NUMBER_OF_COMMIT: ${{ inputs.validate-commit }}
         run: |
           cd "apps/${{ inputs.package }}"
-          uv run cz check --rev-range HEAD~3..HEAD
+          uv run cz check --rev-range HEAD~$NUMBER_OF_COMMIT..HEAD
         
       - name: Dry run, output changelog to stdout
         run: |
