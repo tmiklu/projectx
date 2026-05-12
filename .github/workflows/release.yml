@@ -24,7 +24,7 @@ on:
           - PATCH
         default: AUTO
       validate-commit:
-        description: 'Validate the latest N commit messages:'
+        description: 'Validate the latest N commit messages'
         type: number
         default: 0
   #push:
