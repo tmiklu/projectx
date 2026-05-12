@@ -59,16 +59,18 @@ jobs:
           cd "apps/${{ inputs.package }}"
           NUMBER_OF_COMMITS="HEAD~${{ inputs.validate-commit }}.."
           uv run cz check --rev-range $NUMBER_OF_COMMITS
-        
-      - name: Dry run, output changelog to stdout
+
+      - name: Dry run output changelog to stdout
+        if: "${{ inputs.dry-run == true }}"
+        run: |
+          cd "apps/${{ inputs.package }}"
+          uv run cz bump --yes --dry-run
+          
+      - name: Output changelog to stdout
+        if: "${{ inputs.dry-run == false }}"
         run: |
           INC=${{ inputs.increment }}
-          DRY_RUN="${{ inputs.dry-run == true }}"
           cd "apps/${{ inputs.package }}"
-          if [[ "$DRY_RUN" == "true" ]] ; then
-            echo dry-run
-            uv run cz bump --yes --dry-run
-          fi
           if [[ "$INC" == "AUTO" ]]; then
             echo AUTO
             uv run cz bump --yes --dry-run
