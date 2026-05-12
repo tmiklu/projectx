@@ -1,3 +1,9 @@
+## 1.6.0 (2026-05-12)
+
+### Feat
+
+- Update feature version in main.py
+
 ## 1.5.0 (2026-05-12)
 
 ### Feat
