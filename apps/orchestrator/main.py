@@ -11,6 +11,8 @@ def main():
     print("this is breaking change..., fix! Feature!")
     print("another breaking change, extend this feature!!! Fix here.")
 
+    print("New feature 2.0.0")
+
 
 if __name__ == "__main__":
     main()
