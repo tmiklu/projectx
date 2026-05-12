@@ -43,6 +43,8 @@ env:
 jobs:
   generate-release-log:
     runs-on: ubuntu-latest
+    env:
+      NUMBER_OF_COMMIT: ${{ inputs.validate-commit }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -55,8 +57,6 @@ jobs:
 
       - name: Validate $NUMBER_OF_COMMIT commits to HEAD
         if: ${{ inputs.validate-commit != 0 }}
-        env:
-          NUMBER_OF_COMMIT: ${{ inputs.validate-commit }}
         run: |
           cd "apps/${{ inputs.package }}"
           uv run cz check --rev-range HEAD~$NUMBER_OF_COMMIT..HEAD
