@@ -56,6 +56,7 @@ jobs:
           uv run cz check --rev-range $NUMBER_OF_COMMITS
     
   generate-release-log:
+    needs: validate-commit-messages
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
