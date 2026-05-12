@@ -49,7 +49,7 @@ jobs:
         run: |
           INC=${{ inputs.increment }}
           DRY_RUN="${{ inputs.dry-run == true }}"
-          cd PY_PROJECT
+          cd $PY_PROJECT
           if [[ "$DRY_RUN" == "true" ]] ; then
             echo dry-run
             uv run cz bump --yes --dry-run
@@ -85,7 +85,7 @@ jobs:
       - name: Bump and Create Changelog
         run: |
           INC=${{ inputs.increment }}
-          cd PY_PROJECT
+          cd $PY_PROJECT
           if [[ "$INC" == "AUTO" ]]; then
             uv run cz bump --yes
           elif [[ -z "$INC" ]]; then
@@ -103,7 +103,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
         run: |
-          cd PY_PROJECT
+          cd $PY_PROJECT
           TAG=$(uv run cz version --project)
           grep "^## $TAG" CHANGELOG.md > release.md                                    
           awk "/## $TAG/{flag=1;next}/## [0-9]+/{flag=0}flag" CHANGELOG.md >> release.md
