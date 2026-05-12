@@ -6,7 +6,7 @@ def main():
     print("add sso login for system.")
     print("add email contact, extend feature.")
     print("add calendar option. Fix!")
-    print("new login form, extended!")
+    print("new login form, extended! Fix here too.")
     print("add spam protection. FIX!")
     print("this is breaking change..., fix! Feature!")
     print("another breaking change, extend this feature!!! Fix here.")
