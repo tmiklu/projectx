@@ -1,3 +1,10 @@
+## 1.4.0 (2026-05-12)
+
+### Fix
+
+- Fix typo in new login form print statement
+- Clarify contact form typo fix message
+
 ## 1.3.0 (2026-05-05)
 
 ### Feat
