@@ -57,7 +57,8 @@ jobs:
         if: ${{ inputs.validate-commit != 0 }}
         run: |
           cd "apps/${{ inputs.package }}"
-          uv run cz check --rev-range HEAD~${{ inputs.validate-commit }}..HEAD
+          NUMBER_OF_COMMITS="HEAD~${{ inputs.validate-commit }}.."
+          uv run cz check --rev-range $NUMBER_OF_COMMITS
         
       - name: Dry run, output changelog to stdout
         run: |
