@@ -55,10 +55,11 @@ jobs:
         run: |
           curl -LsSf https://astral.sh/uv/install.sh | sh
 
-      - name: Validate $NUMBER_OF_COMMIT commits to HEAD
-        if: ${{ inputs.validate-commit != 0 }}
+      - name: "Validate {{ vars.NUMBER_OF_COMMIT }} commits to HEAD"
+        if: ${{ vars.NUMBER_OF_COMMIT != 0 }}
         run: |
           cd "apps/${{ inputs.package }}"
+          echo $NUMBER_OF_COMMIT
           uv run cz check --rev-range HEAD~$NUMBER_OF_COMMIT..HEAD
         
       - name: Dry run, output changelog to stdout
