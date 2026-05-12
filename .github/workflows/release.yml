@@ -41,6 +41,20 @@ env:
   EMAIL: "tomas.miklusicak@cloudops.sk"
 
 jobs:
+  validate-commit-messages:
+    if: ${{ inputs.validate-commit != 0 }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: install uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+
+      - name: "Validate commits to HEAD"
+        run: |
+          cd "apps/${{ inputs.package }}"
+          NUMBER_OF_COMMITS="HEAD~${{ inputs.validate-commit }}.."
+          uv run cz check --rev-range $NUMBER_OF_COMMITS
+    
   generate-release-log:
     runs-on: ubuntu-latest
     steps:
@@ -48,17 +62,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: install uv
-        run: |
-          curl -LsSf https://astral.sh/uv/install.sh | sh
-
-      - name: "Validate commits to HEAD"
-        if: ${{ inputs.validate-commit != 0 }}
-        run: |
-          cd "apps/${{ inputs.package }}"
-          NUMBER_OF_COMMITS="HEAD~${{ inputs.validate-commit }}.."
-          uv run cz check --rev-range $NUMBER_OF_COMMITS
 
       - name: Dry run output changelog to stdout
         if: "${{ inputs.dry-run == true }}"
