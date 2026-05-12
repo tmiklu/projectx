@@ -12,6 +12,7 @@ on:
         type: choice
         options:
           - orchestrator
+          - evals
         default: orchestrator
       increment:
         description: 'Choose version bump strategy: AUTO (based on commits), or force MAJOR, MINOR or PATCH increment.'
