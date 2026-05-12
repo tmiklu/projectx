@@ -52,7 +52,7 @@ jobs:
       - name: Validate commits from default branch to HEAD
         run: |
           cd "apps/${{ inputs.package }}"
-          uv run cz check --rev-range main..HEAD
+          uv run cz check -d
         
       - name: Dry run, output changelog to stdout
         run: |
