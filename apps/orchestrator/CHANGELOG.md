@@ -1,3 +1,32 @@
+## 2.2.0
+Released on 2026-05-13
+
+### Feat
+
+- Refactor CHANGELOG to use dynamic GitHub URL ([`83e615f`](https://github.com/tmiklu/projectx/commit/83e615fced7ce216d13fc99366647772aad6eae1)) [`tmiklu`](https://github.com/tmiklu)
+- Add author info to CHANGELOG entries ([`8a88f17`](https://github.com/tmiklu/projectx/commit/8a88f174e760ec3a98857dcb52263bc23b8ea733)) [`tmiklu`](https://github.com/tmiklu)
+- Enhance release workflow with changelog dry run ([`548bc33`](https://github.com/tmiklu/projectx/commit/548bc33fc015b351b53d5eaac35080e3edf44707)) [`tmiklu`](https://github.com/tmiklu)
+- Fix repository link in CHANGELOG.md.j2 ([`bd4b4cc`](https://github.com/tmiklu/projectx/commit/bd4b4cc187b8f0fad89c0bb2737f2e0e52a9fa03)) [`tmiklu`](https://github.com/tmiklu)
+
+### Fix
+
+- Fix formatting of changelog entries ([`4b1f08a`](https://github.com/tmiklu/projectx/commit/4b1f08aeaa6e43fcb93224bb4c8f25468c55d13d)) [`tmiklu`](https://github.com/tmiklu)
+- Fix author link format in CHANGELOG template ([`39447ac`](https://github.com/tmiklu/projectx/commit/39447ac67b25e2d29814b90fd693be66b6f7ef4f)) [`tmiklu`](https://github.com/tmiklu)
+- Remove 'archive' option from upload-artifact step ([`e37b8b0`](https://github.com/tmiklu/projectx/commit/e37b8b070f1f9c1cd788d777e927d2d89811da9e)) [`tmiklu`](https://github.com/tmiklu)
+- Update upload-artifact action to version v7 ([`c72b8dd`](https://github.com/tmiklu/projectx/commit/c72b8dd2a6db2254da162cf567ae39cdab869acb)) [`tmiklu`](https://github.com/tmiklu)
+- Upgrade actions/checkout from v4 to v5 ([`8ef16ba`](https://github.com/tmiklu/projectx/commit/8ef16ba029b035c53fc7f7fbc4ae920fbf103670)) [`tmiklu`](https://github.com/tmiklu)
+- Fix formatting in CHANGELOG template ([`46047e0`](https://github.com/tmiklu/projectx/commit/46047e017d06bcad62b4151d34bbccbff064481a)) [`tmiklu`](https://github.com/tmiklu)
+- Update changelog dry run command to use tee ([`a3bb9bb`](https://github.com/tmiklu/projectx/commit/a3bb9bb5e52c2a5379d6185d383f5a8d867883bf)) [`tmiklu`](https://github.com/tmiklu)
+- Fix path for changelog-dry-run artifact ([`1a1ead4`](https://github.com/tmiklu/projectx/commit/1a1ead42425003382eb775ae94c5f723e146f62f)) [`tmiklu`](https://github.com/tmiklu)
+- Update changelog artifact name to include .md extension ([`5fbb490`](https://github.com/tmiklu/projectx/commit/5fbb490b1eb03ba37fdef964c8a218933a81a1ab)) [`tmiklu`](https://github.com/tmiklu)
+- revert ([`5f1f9ae`](https://github.com/tmiklu/projectx/commit/5f1f9ae703d465d7bbb67b66d7c6b1f3cb60a06d)) [`tmiklu`](https://github.com/tmiklu)
+- Clean up release.yml by removing commented TAG line ([`0fefd67`](https://github.com/tmiklu/projectx/commit/0fefd67aa30c20b7c21b460fd0de1a2f1aaa2e21)) [`tmiklu`](https://github.com/tmiklu)
+- Clean up release.yml by removing comments ([`9979019`](https://github.com/tmiklu/projectx/commit/9979019104fa21d033537afc94e098075f53cddf)) [`tmiklu`](https://github.com/tmiklu)
+- Remove repo_url from commitizen settings ([`5786cb5`](https://github.com/tmiklu/projectx/commit/5786cb57d8e876be301fa050cefc912d71b98ab4)) [`tmiklu`](https://github.com/tmiklu)
+- Fix link format for commit SHA in CHANGELOG ([`ac90729`](https://github.com/tmiklu/projectx/commit/ac90729fdb8b81b1dae797a2bd69027ec06520f1)) [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## 2.1.1
 Released on 2026-05-13
 
