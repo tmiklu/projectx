@@ -1,3 +1,9 @@
+## 1.6.1 (2026-05-13)
+
+### Fix
+
+- Fix print statement for new feature extension
+
 ## 1.6.0 (2026-05-12)
 
 ### Feat
