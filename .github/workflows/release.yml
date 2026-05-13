@@ -127,7 +127,6 @@ jobs:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: |
           TAG=$(uv run cz version --project)
-          #TAG=$(uv run cz version --project)
 
           awk "
             BEGIN { found=0 }
