@@ -1,3 +1,9 @@
+## 2.0.0 (2026-05-13)
+
+### Feat
+
+- Add print statement for breaking change notice
+
 ## 1.9.0 (2026-05-13)
 
 ### Feat
