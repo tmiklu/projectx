@@ -1,3 +1,9 @@
+## 1.7.2 (2026-05-13)
+
+### Fix
+
+- Remove GITHUB_TOKEN from release workflow
+
 ## 1.7.1 (2026-05-13)
 
 ### Fix
