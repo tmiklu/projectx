@@ -1,3 +1,12 @@
+## 2.4.0
+Released on 2026-05-13
+
+### Feat
+
+- Implement git tag collision check ([`368f135`](https://github.com/tmiklu/projectx/commit/368f135ed5d4221a0d66fbdde8d54e95f446aa10)) [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## 2.3.0
 Released on 2026-05-13
 
