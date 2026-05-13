@@ -7,7 +7,7 @@ Released on {{ release.date }}
 ### {{ change_type }}
 
 {% for change in changes %}
-- {{ change.message }} ([`{{ change.sha1[:7] }}`]({{ github_url }}/tmiklu/projectx/commit/{{ change.sha1 }})) ([`{{ change.author }}`]({{ github_url }}/{{ change.author }}))
+- {{ change.message }} ([`{{ change.sha1[:7] }}`]({{ github_url }}/tmiklu/projectx/commit/{{ change.sha1 }})) [`{{ change.author }}`]({{ github_url }}/{{ change.author }})
 {% endfor %}
 
 {% endfor %}
