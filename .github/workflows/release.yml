@@ -4,18 +4,23 @@ on:
   workflow_dispatch:
     inputs:
       dry-run:
-        description: 'Dry run - Create Changelog to stdout'
+        description: >
+          Run in dry-run mode and print the generated changelog to stdout.
         required: false
         type: boolean
       package:
-        description: 'Which slug to release'
+        description: >
+          Select the package to release.
         type: choice
         options:
           - orchestrator
           - evals
         default: orchestrator
       increment:
-        description: 'Choose version bump strategy: AUTO (based on commits), or force MAJOR, MINOR or PATCH increment.'
+        description: >
+          Version bump strategy:
+          AUTO detects the increment from commits,
+          or explicitly force MAJOR, MINOR, or PATCH.
         type: choice
         options:
           - AUTO
@@ -24,7 +29,9 @@ on:
           - PATCH
         default: AUTO
       validate-commit:
-        description: 'Validate the latest N commit messages'
+        description: >
+          Validate the latest N commit messages.
+          Use 0 to skip validation.
         type: number
         default: 0
   #push:
