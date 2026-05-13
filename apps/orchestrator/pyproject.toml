@@ -10,7 +10,6 @@ dependencies = [
 
 [tool.commitizen]
 name = "cz_conventional_commits"
-repo_url = "https://github.com/tmiklu/projectx"
 tag_format = "$version"
 version_scheme = "semver2"
 version_provider = "uv"
