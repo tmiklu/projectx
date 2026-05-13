@@ -115,6 +115,8 @@ jobs:
           fi
 
       - name: Push commits with tags
+        env:
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: | 
           git push && git push --tags
 
