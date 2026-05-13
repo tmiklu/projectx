@@ -82,13 +82,9 @@ jobs:
 
   release:
     if: ${{ inputs.dry-run == false }}
-    #env:
-    #  GITHUB_TOKEN: ${{ secrets.TOKEN }}
     runs-on: ubuntu-latest
     environment: release
     needs: validate-release
-    #permissions:
-    #  contents: write
     steps:
       - name: Generate a token
         id: generate-token
