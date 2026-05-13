@@ -120,8 +120,6 @@ jobs:
           git push && git push --tags
 
       - name: Create GitHub Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
         run: |
           cd "apps/${{ inputs.package }}"
