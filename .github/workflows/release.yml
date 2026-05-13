@@ -44,10 +44,6 @@ env:
   GIT_COMMITTER_NAME: "projectx-ci-bot[bot]"
   EMAIL: "projectx-ci-bot[bot]@users.noreply.github.com"
   APP_DIR: "apps/${{ inputs.package }}"
-  
-defaults:
-  run:
-    working-directory: $APP_DIR
 
 jobs:    
   validate-release:
@@ -64,6 +60,7 @@ jobs:
 
       - name: "Validate commits to HEAD"
         if: ${{ inputs.validate-commit != 0 }}
+        working-directory: $APP_DIR
         run: |
           #cd "apps/${{ inputs.package }}"
           NUMBER_OF_COMMITS="HEAD~${{ inputs.validate-commit }}.."
@@ -71,12 +68,14 @@ jobs:
 
       - name: Dry run output changelog to stdout
         if: "${{ inputs.dry-run == true }}"
+        working-directory: $APP_DIR
         run: |
           #cd "apps/${{ inputs.package }}"
           uv run cz bump --yes --dry-run
           
       - name: Output changelog to stdout
         if: "${{ inputs.dry-run == false }}"
+        working-directory: $APP_DIR
         run: |
           INC=${{ inputs.increment }}
           #cd "apps/${{ inputs.package }}"
