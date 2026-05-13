@@ -70,7 +70,7 @@ jobs:
       - name: Dry run output changelog to stdout
         if: "${{ inputs.dry-run == true }}"
         run: |
-          uv run cz bump --yes --dry-run > changelog-dry-run.md
+          uv run cz bump --yes --dry-run | tee changelog-dry-run.md
 
       - name: Upload changelog artifact
         if: ${{ inputs.dry-run == true }}
