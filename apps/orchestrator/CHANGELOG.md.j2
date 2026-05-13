@@ -1,5 +1,6 @@
 {% for release in tree %}
-## {{ release.version }}{% if release.date %} ({{ release.date }}){% endif %}
+## {{ release.version }}
+Released on {{ release.date }}
 
 {% for change_type, changes in release.changes.items() %}
 ### {{ change_type }}
