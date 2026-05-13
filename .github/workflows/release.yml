@@ -64,21 +64,18 @@ jobs:
       - name: "Validate commits to HEAD"
         if: ${{ inputs.validate-commit != 0 }}
         run: |
-          #cd "apps/${{ inputs.package }}"
           NUMBER_OF_COMMITS="HEAD~${{ inputs.validate-commit }}.."
           uv run cz check --rev-range $NUMBER_OF_COMMITS
 
       - name: Dry run output changelog to stdout
         if: "${{ inputs.dry-run == true }}"
         run: |
-          #cd "apps/${{ inputs.package }}"
           uv run cz bump --yes --dry-run
           
       - name: Output changelog to stdout
         if: "${{ inputs.dry-run == false }}"
         run: |
           INC=${{ inputs.increment }}
-          #cd "apps/${{ inputs.package }}"
           if [[ "$INC" == "AUTO" ]]; then
             echo AUTO
             uv run cz bump --yes --dry-run
@@ -118,7 +115,6 @@ jobs:
       - name: Bump and Create Changelog
         run: |
           INC=${{ inputs.increment }}
-          #cd "apps/${{ inputs.package }}"
           if [[ "$INC" == "AUTO" ]]; then
             uv run cz bump --yes
           elif [[ -z "$INC" ]]; then
@@ -136,7 +132,6 @@ jobs:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
         shell: bash
         run: |
-          #cd "apps/${{ inputs.package }}"
           TAG=$(uv run cz version --project)
           grep "^## $TAG" CHANGELOG.md > release.md                                    
           awk "/## $TAG/{flag=1;next}/## [0-9]+/{flag=0}flag" CHANGELOG.md >> release.md
