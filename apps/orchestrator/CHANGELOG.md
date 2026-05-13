@@ -1,3 +1,16 @@
+## 2.1.0 (2026-05-13)
+### Feat
+
+- Refactor release notes extraction logic in release.yml ([`c243d3e`](https://github.com/tmiklu/projectx/commit/c243d3e98448eaaba87c162dd47bcd811d1022ab))
+- Create CHANGELOG.md.j2 for release notes ([`049d511`](https://github.com/tmiklu/projectx/commit/049d511557a23a3e31539f3b36c2403a6525dd84))
+
+### Fix
+
+- Refactor changelog output logic in release.yml ([`a51b55f`](https://github.com/tmiklu/projectx/commit/a51b55f79d5f27f9dd1c24a4f54d3d0d9b1c2aa1))
+- Simplify bump logic in release workflow ([`b1d196c`](https://github.com/tmiklu/projectx/commit/b1d196ce1dbfa598d652c39683018f8583aab945))
+
+
+
 ## 2.0.1 (2026-05-13)
 
 ### Fix
