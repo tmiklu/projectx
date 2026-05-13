@@ -13,7 +13,7 @@ def main():
 
     print("New feature 1.6.0")
 
-    print("Extend new feature")
+    print("Extend new feature, fix.")
 
 
 if __name__ == "__main__":
