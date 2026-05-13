@@ -15,6 +15,8 @@ def main():
 
     print("Extend new feature, fix.")
 
+    print("breaking change")
+
 
 if __name__ == "__main__":
     main()
