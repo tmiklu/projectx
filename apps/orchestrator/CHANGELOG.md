@@ -1,3 +1,9 @@
+## 1.6.2 (2026-05-13)
+
+### Fix
+
+- Update CI bot names and email in release workflow
+
 ## 1.6.1 (2026-05-13)
 
 ### Fix
