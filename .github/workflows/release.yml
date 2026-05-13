@@ -115,12 +115,10 @@ jobs:
       - name: Bump and Create Changelog
         run: |
           INC=${{ inputs.increment }}
-          if [[ "$INC" == "AUTO" ]]; then
-            uv run cz bump --yes
-          elif [[ -z "$INC" ]]; then
+          if [[ "$INC" == "AUTO" || -z "$INC" ]]; then
             uv run cz bump --yes
           else
-            uv run cz bump --increment "$INC"
+            uv run cz bump --yes --increment "$INC"
           fi
 
       - name: Push commits with tags
