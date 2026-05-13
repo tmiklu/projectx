@@ -1,3 +1,17 @@
+## 1.9.0 (2026-05-13)
+
+### Feat
+
+- Clean up release.yml by removing commented lines
+
+### Fix
+
+- Clean up release workflow by removing comments
+- Fix working-directory reference in release workflow
+- Set default shell and working directory for jobs
+- Fix working directory reference in release workflow
+- Refactor working directory settings in release workflow
+
 ## 1.8.1 (2026-05-13)
 
 ### Fix
