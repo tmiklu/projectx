@@ -130,7 +130,6 @@ jobs:
       - name: Create GitHub Release
         env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
-        shell: bash
         run: |
           TAG=$(uv run cz version --project)
           grep "^## $TAG" CHANGELOG.md > release.md                                    
