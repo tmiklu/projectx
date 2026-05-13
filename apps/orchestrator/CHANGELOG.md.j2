@@ -1,0 +1,13 @@
+{% for release in tree %}
+## {{ release.version }}{% if release.date %} ({{ release.date }}){% endif %}
+
+{% for change_type, changes in release.changes.items() %}
+### {{ change_type }}
+
+{% for change in changes %}
+- {{ change.message }} ([`{{ change.sha1[:7] }}`](https://github.com/tmiklu/projectx/commit/{{ change.sha1 }}))
+{% endfor %}
+
+{% endfor %}
+
+{% endfor %}
