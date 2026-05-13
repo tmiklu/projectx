@@ -82,14 +82,21 @@ jobs:
 
   release:
     if: ${{ inputs.dry-run == false }}
-    env:
-      GITHUB_TOKEN: ${{ secrets.TOKEN }}
+    #env:
+    #  GITHUB_TOKEN: ${{ secrets.TOKEN }}
     runs-on: ubuntu-latest
     environment: release
     needs: validate-release
-    permissions:
-      contents: write
+    #permissions:
+    #  contents: write
     steps:
+      - name: Generate a token
+        id: generate-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.PROJECTX_CI_BOT_ID }}
+          private-key: ${{ secrets.PROJECTX_CI_BOT_KEY }}
+
       - name: Checkout code
         uses: actions/checkout@v4
         with:
