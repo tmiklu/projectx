@@ -76,13 +76,10 @@ jobs:
         if: "${{ inputs.dry-run == false }}"
         run: |
           INC=${{ inputs.increment }}
-          if [[ "$INC" == "AUTO" ]]; then
-            echo AUTO
-            uv run cz bump --yes --dry-run
-          elif [[ -z "$INC" ]]; then
-            uv run cz bump --yes --dry-run
+          if [[ "$INC" == "AUTO" || -z "$INC" ]]; then
+            uv run cz bump --yes
           else
-            uv run cz bump --increment "$INC" --dry-run
+            uv run cz bump --yes --increment "$INC"
           fi
 
   release:
