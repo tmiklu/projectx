@@ -36,9 +36,9 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  GIT_AUTHOR_NAME: "projectx-ci-bot"
-  GIT_COMMITTER_NAME: "projectx-ci-bot"
-  EMAIL: "projectx-ci-bot@users.noreply.github.com"
+  GIT_AUTHOR_NAME: "projectx-ci-bot[bot]"
+  GIT_COMMITTER_NAME: "projectx-ci-bot[bot]"
+  EMAIL: "projectx-ci-bot[bot]@users.noreply.github.com"
 
 jobs:    
   validate-release:
