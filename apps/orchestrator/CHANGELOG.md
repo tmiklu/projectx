@@ -1,3 +1,9 @@
+## 1.8.0 (2026-05-13)
+
+### Feat
+
+- Set GH_TOKEN for GitHub Release step
+
 ## 1.7.2 (2026-05-13)
 
 ### Fix
