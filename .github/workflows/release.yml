@@ -141,8 +141,3 @@ jobs:
           gh release create "$TAG" \
             --title "$TAG" \
             --notes-file release.md
-          #grep "^## $TAG" CHANGELOG.md > release.md                                    
-          #awk "/## $TAG/{flag=1;next}/## [0-9]+/{flag=0}flag" CHANGELOG.md >> release.md
-          #gh release create "$TAG" \
-          #  --title "$TAG" \
-          #  --notes-file release.md
