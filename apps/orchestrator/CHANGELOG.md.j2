@@ -1,3 +1,4 @@
+{% set github_url = 'https://github.com' %}
 {% for release in tree %}
 ## {{ release.version }}
 Released on {{ release.date }}
@@ -6,7 +7,7 @@ Released on {{ release.date }}
 ### {{ change_type }}
 
 {% for change in changes %}
-- {{ change.message }} ([`{{ change.sha1[:7] }}`](https://github.com/tmiklu/projectx/commit/{{ change.sha1 }})) {{ change.author }}
+- {{ change.message }} ([`{{ change.sha1[:7] }}`]({{ github_url }}/tmiklu/projectx/commit/{{ change.sha1 }})) {{ github_url }}/{{ change.author }}
 {% endfor %}
 
 {% endfor %}
