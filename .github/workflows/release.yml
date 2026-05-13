@@ -34,9 +34,6 @@ on:
           Use 0 to skip validation.
         type: number
         default: 0
-  #push:
-  #  branches:
-  #    - 'release/*'
 
 concurrency:
   group: ci-${{ github.ref }}
