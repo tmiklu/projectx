@@ -142,8 +142,6 @@ jobs:
             found { print }
           " CHANGELOG.md > release.md
 
-          cat release.md
-
           gh release create "$TAG" \
             --title "$TAG" \
             --notes-file release.md
