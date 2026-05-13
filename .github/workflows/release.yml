@@ -90,7 +90,7 @@ jobs:
           fi
           
       - name: Check git tag collision
-        run: git --no-pager tag | grep \"$(cz bump --get-next)\"
+        run: git --no-pager tag | grep \"$(uv run cz bump --get-next)\"
 
   release:
     if: ${{ inputs.dry-run == false }}
