@@ -88,6 +88,9 @@ jobs:
           else
             uv run cz bump --yes --increment "$INC"
           fi
+          
+       - name: Check git tag collision
+         run: git --no-pager tag | grep \"$(cz bump --get-next)\"
 
   release:
     if: ${{ inputs.dry-run == false }}
