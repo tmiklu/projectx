@@ -76,7 +76,7 @@ jobs:
         if: ${{ inputs.dry-run == true }}
         uses: actions/upload-artifact@v4
         with:
-          name: changelog-dry-run-${{ inputs.package }}
+          name: changelog-dry-run-${{ inputs.package }}.md
           path: changelog-dry-run.md
           
       - name: Output changelog to stdout
