@@ -1,3 +1,20 @@
+## 2.3.0
+Released on 2026-05-13
+
+### Feat
+
+- Check for git tag collisions in release workflow ([`2641267`](https://github.com/tmiklu/projectx/commit/2641267164c0c1c045f73ac6d7124be59497d25f)) [`tmiklu`](https://github.com/tmiklu)
+
+### Fix
+
+- Modify GET_NEXT assignment in release.yml ([`a5e3007`](https://github.com/tmiklu/projectx/commit/a5e300757591e8a744c8d9347b8e5ccd411b0579)) [`tmiklu`](https://github.com/tmiklu)
+- Fix command execution for version bump in release.yml ([`2b323b5`](https://github.com/tmiklu/projectx/commit/2b323b523d103b9fbd230d878d69118814a16d7c)) [`tmiklu`](https://github.com/tmiklu)
+- Fix tag collision check in release workflow ([`b736d74`](https://github.com/tmiklu/projectx/commit/b736d747c63edd01d9c3597a5a09017d50f21598)) [`tmiklu`](https://github.com/tmiklu)
+- Fix git tag collision check command ([`ea1b6f4`](https://github.com/tmiklu/projectx/commit/ea1b6f403f3af8aae2dfa6f22fc26ccbea8bd7cb)) [`tmiklu`](https://github.com/tmiklu)
+- Fix indentation for git tag collision check step ([`9abb290`](https://github.com/tmiklu/projectx/commit/9abb2901af8766c62fae839e91ffb056875c8446)) [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## 2.2.0
 Released on 2026-05-13
 
