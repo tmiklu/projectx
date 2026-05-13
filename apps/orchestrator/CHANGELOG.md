@@ -1,3 +1,13 @@
+## 2.1.1
+Released on 2026-05-13
+
+### Fix
+
+- Update commit link format in CHANGELOG template ([`8857e97`](/commit/8857e975664a8435ddd30c98f13d0ff798fb3cc4))
+- Enhance changelog format with release date ([`09ea8f7`](/commit/09ea8f7e092a7d9cd6ae7b179696d4538635e99c))
+
+
+
 ## 2.1.0 (2026-05-13)
 ### Feat
 
