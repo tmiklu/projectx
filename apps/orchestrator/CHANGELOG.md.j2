@@ -1,5 +1,3 @@
-{% set repo = config.repo_url or ("https://github.com/" ~ env.GITHUB_REPO) %}
-
 {% for release in tree %}
 ## {{ release.version }}
 Released on {{ release.date }}
@@ -8,7 +6,7 @@ Released on {{ release.date }}
 ### {{ change_type }}
 
 {% for change in changes %}
-- {{ change.message }} ([`{{ change.sha1[:7] }}`]({{ repo }}/commit/{{ change.sha1 }}))
+- {{ change.message }} ([`{{ change.sha1[:7] }}`](https://github.com/tmiklu/projectx/commit/{{ change.sha1 }}))
 {% endfor %}
 
 {% endfor %}
