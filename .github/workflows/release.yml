@@ -78,6 +78,7 @@ jobs:
         with:
           name: changelog-dry-run-${{ inputs.package }}.md
           path: "apps/${{ inputs.package }}/changelog-dry-run.md"
+          archive: false
           
       - name: Output changelog to stdout
         if: "${{ inputs.dry-run == false }}"
