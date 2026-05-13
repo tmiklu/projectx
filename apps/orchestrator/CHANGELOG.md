@@ -1,3 +1,9 @@
+## 2.0.1 (2026-05-13)
+
+### Fix
+
+- Add repo_url to commitizen in pyproject.toml
+
 ## 2.0.0 (2026-05-13)
 
 ### Feat
