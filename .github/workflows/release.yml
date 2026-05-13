@@ -120,6 +120,8 @@ jobs:
           git push && git push --tags
 
       - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
         shell: bash
         run: |
           cd "apps/${{ inputs.package }}"
