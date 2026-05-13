@@ -85,12 +85,15 @@ jobs:
           INC=${{ inputs.increment }}
           if [[ "$INC" == "AUTO" || -z "$INC" ]]; then
             uv run cz bump --yes
+            GET_NEXT=$(uv run cz bump --yes --get-next)
           else
             uv run cz bump --yes --increment "$INC"
+            GET_NEXT=$(uv run cz bump --yes --get-next --increment "$INC")
           fi
           
       - name: Check git tag collision
-        run: git --no-pager tag | grep \"$(uv run cz bump --get-next)\"
+        run: |
+          git --no-pager tag | grep $GET_NEXT
 
   release:
     if: ${{ inputs.dry-run == false }}
