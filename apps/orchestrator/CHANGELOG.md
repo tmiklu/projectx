@@ -1,3 +1,9 @@
+## 1.8.1 (2026-05-13)
+
+### Fix
+
+- Update print statements for clarity and fixes
+
 ## 1.8.0 (2026-05-13)
 
 ### Feat
