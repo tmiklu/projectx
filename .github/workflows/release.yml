@@ -36,9 +36,9 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  GIT_AUTHOR_NAME: "tmiklu"
-  GIT_COMMITTER_NAME: "tmiklu"
-  EMAIL: "tomas.miklusicak@cloudops.sk"
+  GIT_AUTHOR_NAME: "my-ci-bot[bot]"
+  GIT_COMMITTER_NAME: "my-ci-bot[bot]"
+  EMAIL: "my-ci-bot[bot]@users.noreply.github.com"
 
 jobs:    
   validate-release:
