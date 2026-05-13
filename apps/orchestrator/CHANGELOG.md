@@ -1,3 +1,15 @@
+## 1.7.0 (2026-05-13)
+
+### Feat
+
+- Modify release.yml to comment out token and permissions
+
+### Fix
+
+- Update CI bot names in release workflow
+- Update CI bot names and email in release workflow
+- Add environment variable for GH_TOKEN in release workflow
+
 ## 1.6.2 (2026-05-13)
 
 ### Fix
