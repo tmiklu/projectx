@@ -1,3 +1,9 @@
+## 1.7.1 (2026-05-13)
+
+### Fix
+
+- Modify CI bot environment variables
+
 ## 1.7.0 (2026-05-13)
 
 ### Feat
