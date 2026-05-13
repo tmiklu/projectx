@@ -127,8 +127,22 @@ jobs:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: |
           TAG=$(uv run cz version --project)
-          grep "^## $TAG" CHANGELOG.md > release.md                                    
-          awk "/## $TAG/{flag=1;next}/## [0-9]+/{flag=0}flag" CHANGELOG.md >> release.md
+          #TAG=$(uv run cz version --project)
+
+          awk "
+            BEGIN { found=0 }
+            \$0 ~ \"^## ${TAG}\" { found=1; next }
+            found && \$0 ~ \"^## \" { exit }
+            found { print }
+          " CHANGELOG.md > release.md
+
+          cat release.md
+
           gh release create "$TAG" \
             --title "$TAG" \
             --notes-file release.md
+          #grep "^## $TAG" CHANGELOG.md > release.md                                    
+          #awk "/## $TAG/{flag=1;next}/## [0-9]+/{flag=0}flag" CHANGELOG.md >> release.md
+          #gh release create "$TAG" \
+          #  --title "$TAG" \
+          #  --notes-file release.md
