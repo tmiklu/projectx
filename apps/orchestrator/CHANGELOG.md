@@ -285,6 +285,15 @@ Released on 2026-05-13
 - add commitizen
 - init projectx
 
+## release/orchestrator/5.0.0
+Released on 2026-05-15
+
+### Feat
+
+- Simplify release branch creation in workflow ([`d329e2c`](https://github.com/tmiklu/projectx/commit/d329e2ce279f95f774d5e6d2a5b7d04a5575d2f1)) [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## release/orchestrator/4.1.0
 Released on 2026-05-15
 
