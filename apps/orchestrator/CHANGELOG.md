@@ -285,6 +285,15 @@ Released on 2026-05-13
 - add commitizen
 - init projectx
 
+## release/orchestrator/2.9.0
+Released on 2026-05-15
+
+### Feat
+
+- Fix syntax for conditional branch creation ([`c21c38c`](https://github.com/tmiklu/projectx/commit/c21c38c03eaa7e035885d4ebb76e977331cae5eb)) [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## release/orchestrator/2.8.1
 Released on 2026-05-15
 
