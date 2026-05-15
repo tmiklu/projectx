@@ -92,7 +92,6 @@ jobs:
           fi
           
       - name: Check git tag collision
-        if: "${{ inputs.dry-run == false }}"
         run: |
           git --no-pager tag | grep $GET_NEXT
           [[ $? -eq "0" ]] && exit 0 || echo "Git tag collision detected!" ; exit 1
