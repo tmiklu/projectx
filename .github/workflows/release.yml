@@ -13,9 +13,9 @@ on:
           Select the package to release.
         type: choice
         options:
-          - ai-orchestrator
+          - orchestrator
           - evals
-        default: ai-orchestrator
+        default: orchestrator
       increment:
         description: >
           Version bump strategy:
