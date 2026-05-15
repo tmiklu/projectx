@@ -120,7 +120,6 @@ jobs:
             echo "DETECT_INCREMENT=$(grep -Eo 'MAJOR|MINOR|PATCH' changelog.md)" >> $GITHUB_ENV
           else
             echo "DETECT_INCREMENT=$INC" >> $GITHUB_ENV
-            
             uv run cz bump --yes --increment "$INC"
           fi
 
