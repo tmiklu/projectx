@@ -285,6 +285,21 @@ Released on 2026-05-13
 - add commitizen
 - init projectx
 
+## release/orchestrator/2.7.0
+Released on 2026-05-15
+
+### Feat
+
+- Update release workflow to handle increment detection ([`cb89f27`](https://github.com/tmiklu/projectx/commit/cb89f276ae7201e133e814eacfe6d30240fb0fef)) [`tmiklu`](https://github.com/tmiklu)
+- Add dry run output for changelog generation ([`8c0b533`](https://github.com/tmiklu/projectx/commit/8c0b5335a26ac0d4e33f0623cef030088bb04028)) [`tmiklu`](https://github.com/tmiklu)
+
+### Fix
+
+- Update changelog generation in release workflow ([`ffc614f`](https://github.com/tmiklu/projectx/commit/ffc614fccaaa5c98fd58c599a7aa077e9cb63b0d)) [`tmiklu`](https://github.com/tmiklu)
+- Remove dry-run condition for git tag collision check ([`37e311d`](https://github.com/tmiklu/projectx/commit/37e311d5c51c5a7b60b304329dfc6652688fa329)) [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## release/orchestrator/2.6.0
 Released on 2026-05-15
 
