@@ -69,7 +69,6 @@ jobs:
           uv run cz check --rev-range $NUMBER_OF_COMMITS
 
       - name: Output changelog to stdout
-        if: "${{ inputs.dry-run == true }}"
         run: |
           CHANGE_LOG_DRY_RUN="changelog-dry-run.md"
           if [[ "$INC" == "AUTO" || -z "$INC" ]]; then
@@ -90,7 +89,6 @@ jobs:
           fi
 
       - name: Upload changelog artifact
-        if: ${{ inputs.dry-run == true }}
         uses: actions/upload-artifact@v7
         with:
           name: changelog-dry-run-${{ inputs.package }}.md
