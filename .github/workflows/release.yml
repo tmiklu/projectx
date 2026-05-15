@@ -51,8 +51,6 @@ jobs:
       run:
         shell: bash
         working-directory: "apps/${{ inputs.package }}"
-    outputs:
-      next_version: ${{ steps.bump.outputs.GET_NEXT }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
@@ -122,6 +120,7 @@ jobs:
             echo "DETECT_INCREMENT=$(grep -Eo 'MAJOR|MINOR|PATCH' changelog.md)" >> $GITHUB_ENV
           else
             echo "DETECT_INCREMENT=$INC" >> $GITHUB_ENV
+            
             uv run cz bump --yes --increment "$INC"
           fi
 
@@ -131,8 +130,6 @@ jobs:
           git push && git push --tags
           
       - name: Ensure release branch exists (minor/major only)
-        env:
-          GET_NEXT: ${{needs.validate-release.outputs.next_version}}
         run: |
           if [[ $DETECT_INCREMENT == "MAJOR" || $DETECT_INCREMENT == "MINOR" ]]; then
             echo "create branch -> release/${{ inputs.package }}/$GET_NEXT"
