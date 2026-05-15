@@ -285,6 +285,15 @@ Released on 2026-05-13
 - add commitizen
 - init projectx
 
+## release/orchestrator/2.8.1
+Released on 2026-05-15
+
+### Fix
+
+- Ensure release branch exists for minor/major versions ([`d6edd1f`](https://github.com/tmiklu/projectx/commit/d6edd1fab6213df7b4d035f9a1f269b607b71d33)) [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## release/orchestrator/2.8.0
 Released on 2026-05-15
 
