@@ -138,7 +138,6 @@ jobs:
 
       - name: Push commits with tags
         run: |
-          env
           git push && git push --tags
           
       - name: Ensure release branch exists (minor/major only)
