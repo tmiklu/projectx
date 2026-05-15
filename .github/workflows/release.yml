@@ -71,11 +71,12 @@ jobs:
       - name: Output changelog to stdout
         if: "${{ inputs.dry-run == true }}"
         run: |
+          CHANGE_LOG_DRY_RUN="changelog-dry-run.md"
           if [[ "$INC" == "AUTO" || -z "$INC" ]]; then
-            uv run cz bump --yes --dry-run
+            uv run cz bump --yes --dry-run | tee $CHANGE_LOG_DRY_RUN
             echo "GET_NEXT=$(uv run cz bump --yes --get-next)" >> $GITHUB_ENV
           else
-            uv run cz bump --yes --increment "$INC" --dry-run
+            uv run cz bump --yes --increment "$INC" --dry-run | tee $CHANGE_LOG_DRY_RUN
             echo "GET_NEXT=$(uv run cz bump --yes --get-next --increment $INC)" >> $GITHUB_ENV
           fi
 
