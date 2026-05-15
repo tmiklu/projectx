@@ -10,7 +10,7 @@ dependencies = [
 
 [tool.commitizen]
 name = "cz_conventional_commits"
-tag_format = "release/ai-orchestrator/$version"
+tag_format = "release/orchestrator/$version"
 version_scheme = "semver2"
 version_provider = "uv"
 update_changelog_on_bump = true
