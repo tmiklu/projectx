@@ -139,6 +139,12 @@ jobs:
         run: |
           env
           git push && git push --tags
+          
+      - name: Ensure release branch exists (minor/major only)
+        run: |
+          if [[ DETECT_INCREMENT == "MAJOR" || DETECT_INCREMENT == "MINOR" ]]; then
+            echo "create branch -> release/${{ inputs.package }}/$GET_NEXT"
+          fi
 
       - name: Create GitHub Release
         env:
