@@ -73,11 +73,10 @@ jobs:
         run: |
           CHANGE_LOG_DRY_RUN="changelog-dry-run.md"
           if [[ "$INC" == "AUTO" || -z "$INC" ]]; then
-            uv run cz bump --yes --get-next
-            echo --->
+            echo "GET_NEXT=$(uv run cz bump --yes --get-next)" >> $GITHUB_ENV
             uv run cz bump --yes --dry-run | tee $CHANGE_LOG_DRY_RUN
           else
-            echo "GET_NEXT=$(uv run cz bump --yes --get-next --increment $INC)" >> $GITHUB_ENV
+            echo GET_NEXT=$(uv run cz bump --yes --get-next --increment "$INC")
             uv run cz bump --yes --increment "$INC" --dry-run | tee $CHANGE_LOG_DRY_RUN
           fi
 
@@ -90,6 +89,7 @@ jobs:
           
       - name: Check git tag collision
         run: |
+          env
           git --no-pager tag | grep -E "release\/${{ inputs.package }}\/$GET_NEXT"
           [[ $? -eq "0" ]] && echo "No tag collision." || echo "Git tag collision detected!" ; exit 1
 
