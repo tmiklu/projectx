@@ -142,14 +142,11 @@ jobs:
           git push && git push --tags
           
       - name: Ensure release branch exists (minor/major only)
+        if: ${{ env.DETECT_INCREMENT != 'PATCH' }}
         run: |
-          if [[ $DETECT_INCREMENT == "MAJOR" || $DETECT_INCREMENT == "MINOR" ]]; then
-            echo "create branch -> release/${{ inputs.package }}/${{ env.GET_NEXT }}"
-            git checkout main ; git checkout -b "release/${{ inputs.package }}/${{ env.GET_NEXT }}"
-            git status
-          else
-            echo "$DETECT_INCREMENT detected!"
-          fi
+            RELEASE_BRANCH="release/${{ inputs.package }}/${{ env.GET_NEXT }}"
+            echo "create release branch $RELEASE_BRANCH"
+            git push origin origin/main:$RELEASE_BRANCH
 
       - name: Create GitHub Release
         env:
