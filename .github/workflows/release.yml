@@ -87,7 +87,7 @@ jobs:
           
       - name: Check git tag collision
         run: |
-          git --no-pager tag | grep $GET_NEXT
+          git --no-pager tag | grep -E "release\/${{ inputs.package }}\/$GET_NEXT
           [[ $? -eq "0" ]] && echo "No tag collision." || echo "Git tag collision detected!" ; exit 1
 
   release:
