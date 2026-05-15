@@ -51,6 +51,8 @@ jobs:
       run:
         shell: bash
         working-directory: "apps/${{ inputs.package }}"
+    outputs:
+      next_version: ${{ steps.bump.outputs.GET_NEXT }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
@@ -80,15 +82,16 @@ jobs:
           name: changelog-dry-run-${{ inputs.package }}.md
           path: "apps/${{ inputs.package }}/changelog-dry-run.md"
           
-      - name: Output bump to stdout
+      - name: Bump version and output to stdout
         if: "${{ inputs.dry-run == false }}"
+        id: bump
         run: |
           INC=${{ inputs.increment }}
           if [[ "$INC" == "AUTO" || -z "$INC" ]]; then
-            echo "GET_NEXT=$(uv run cz bump --yes --get-next)" >> $GITHUB_ENV
+            echo "GET_NEXT=$(uv run cz bump --yes --get-next)" >> $GITHUB_OUTPUT
             uv run cz bump --yes
           else
-            echo GET_NEXT=$(uv run cz bump --yes --get-next --increment "$INC") >> $GITHUB_ENV
+            echo GET_NEXT=$(uv run cz bump --yes --get-next --increment "$INC") >> $GITHUB_OUTPUT
             uv run cz bump --yes --increment "$INC"
           fi
           
@@ -131,7 +134,6 @@ jobs:
             uv run cz bump --yes | tee changelog.md
             echo "DETECT_INCREMENT=$(grep -Eo 'MAJOR|MINOR|PATCH' changelog.md)" >> $GITHUB_ENV
           else
-            uv run cz bump --yes --increment "$INC"
             echo "DETECT_INCREMENT=$INC" >> $GITHUB_ENV
           fi
 
@@ -141,6 +143,8 @@ jobs:
           git push && git push --tags
           
       - name: Ensure release branch exists (minor/major only)
+        env:
+          GET_NEXT: ${{needs.validate-release.outputs.next_version}}
         run: |
           if [[ $DETECT_INCREMENT == "MAJOR" || $DETECT_INCREMENT == "MINOR" ]]; then
             echo "create branch -> release/${{ inputs.package }}/$GET_NEXT"
