@@ -285,6 +285,15 @@ Released on 2026-05-13
 - add commitizen
 - init projectx
 
+## release/orchestrator/4.0.1
+Released on 2026-05-15
+
+### Fix
+
+- Enhance release workflow to detect next version ([`048bc13`](https://github.com/tmiklu/projectx/commit/048bc1325ab1946ff5f5438d2fdccd54c47ca6eb)) [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## release/orchestrator/4.0.0
 Released on 2026-05-15
 
