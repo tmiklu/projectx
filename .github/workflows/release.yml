@@ -80,18 +80,18 @@ jobs:
             uv run cz bump --yes --increment "$INC" --dry-run | tee $CHANGE_LOG_DRY_RUN
           fi
 
+      - name: Check git tag collision
+        run: |
+          env
+          git --no-pager tag | grep "release/${{ inputs.package }}/${{ vars.GET_NEXT }}"
+          [[ $? -eq "0" ]] && echo "No tag collision." || echo "Git tag collision detected!" ; exit 1
+
       - name: Upload changelog artifact
         if: ${{ inputs.dry-run == true }}
         uses: actions/upload-artifact@v7
         with:
           name: changelog-dry-run-${{ inputs.package }}.md
           path: "apps/${{ inputs.package }}/changelog-dry-run.md"
-          
-      - name: Check git tag collision
-        run: |
-          env
-          git --no-pager tag | grep -E "release\/${{ inputs.package }}\/$GET_NEXT"
-          [[ $? -eq "0" ]] && echo "No tag collision." || echo "Git tag collision detected!" ; exit 1
 
   release:
     if: ${{ inputs.dry-run == false }}
