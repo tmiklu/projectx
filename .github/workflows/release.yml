@@ -83,7 +83,7 @@ jobs:
       - name: Check git tag collision
         run: |
           env
-          git --no-pager tag | grep -E "release\/${{ inputs.package }}\/${{ env.GET_NEXT }}"
+          git --no-pager tag | grep "release/${{ inputs.package }}/${{ env.GET_NEXT }}"
           [[ $? -eq "0" ]] && echo "No tag collision." || echo "Git tag collision detected!" ; exit 1
 
       - name: Upload changelog artifact
