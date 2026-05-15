@@ -82,7 +82,8 @@ jobs:
 
       - name: Check git tag collision
         run: |
-          git rev-parse "release/${{ inputs.package }}/${{ env.GET_NEXT }}"
+          GET_TAG="release/${{ inputs.package }}/${{ env.GET_NEXT }}"
+          git --no-pager tag --list
 
       - name: Upload changelog artifact
         if: ${{ inputs.dry-run == true }}
