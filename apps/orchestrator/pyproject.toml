@@ -1,5 +1,5 @@
 [project]
-name = "abc"
+name = "ai-orchestrator"
 version = "2.5.0"
 description = "Add your description here"
 readme = "README.md"
@@ -10,7 +10,7 @@ dependencies = [
 
 [tool.commitizen]
 name = "cz_conventional_commits"
-tag_format = "$version"
+tag_format = "release/$project_name/$version"
 version_scheme = "semver2"
 version_provider = "uv"
 update_changelog_on_bump = true
