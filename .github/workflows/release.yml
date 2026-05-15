@@ -147,6 +147,8 @@ jobs:
             echo "create branch -> release/${{ inputs.package }}/${{ env.GET_NEXT }}"
             git checkout main ; git checkout -b "release/${{ inputs.package }}/${{ env.GET_NEXT }}"
             git status
+          else
+            echo "$DETECT_INCREMENT detected!"
           fi
 
       - name: Create GitHub Release
