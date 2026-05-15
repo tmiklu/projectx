@@ -1,3 +1,12 @@
+## 2.5.0
+Released on 2026-05-15
+
+### Feat
+
+- Update release tag format in workflow ([`4ad36a6`](https://github.com/tmiklu/projectx/commit/4ad36a6d96ce3e13ca5a860f78d334ca8d38ba66)) [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## 2.4.0
 Released on 2026-05-13
 
