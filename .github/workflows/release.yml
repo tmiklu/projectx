@@ -140,7 +140,7 @@ jobs:
         env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: |
-          TAG="release/${{ inputs.package}}/$(uv run cz version --project)"
+          TAG="release/${{ inputs.package }}/$(uv run cz version --project)"
 
           awk "
             BEGIN { found=0 }
