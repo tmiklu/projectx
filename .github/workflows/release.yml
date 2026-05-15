@@ -145,8 +145,7 @@ jobs:
         run: |
             RELEASE_BRANCH="release/${{ inputs.package }}/${{ env.GET_NEXT }}"
             echo "create release branch $RELEASE_BRANCH"
-            git branch $RELEASE_BRANCH
-            git push origin $RELEASE_BRANCH
+            git push origin origin/main:"refs/heads/release/orchestrator/${GET_NEXT}"
 
       - name: Create GitHub Release
         env:
