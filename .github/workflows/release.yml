@@ -6,7 +6,8 @@ on:
       dry-run:
         description: >
           Run in dry-run mode and print the generated changelog to stdout.
-        required: true
+        required: false
+        default: true
         type: boolean
       package:
         description: >
