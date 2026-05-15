@@ -83,7 +83,11 @@ jobs:
       - name: Check git tag collision
         run: |
           GET_TAG="release/${{ inputs.package }}/${{ env.GET_NEXT }}"
-          git --no-pager tag --list
+          
+          if git --no-pager tag --list | grep -Fxq "$GET_TAG"; then
+            echo "Git tag collision detected!"
+            exit 1
+          fi
 
       - name: Upload changelog artifact
         if: ${{ inputs.dry-run == true }}
