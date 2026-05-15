@@ -285,6 +285,16 @@ Released on 2026-05-13
 - add commitizen
 - init projectx
 
+## release/orchestrator/2.8.0
+Released on 2026-05-15
+
+### Feat
+
+- Fix environment variable assignment in release.yml ([`68f6a7f`](https://github.com/tmiklu/projectx/commit/68f6a7f379e2b178232a36b4797e717eb83f1159)) [`tmiklu`](https://github.com/tmiklu)
+- Update increment detection in release workflow ([`56fd641`](https://github.com/tmiklu/projectx/commit/56fd6416d23b4f1819a54d0e7f9fd1146bf827ba)) [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## release/orchestrator/2.7.1
 Released on 2026-05-15
 
