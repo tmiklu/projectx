@@ -6,7 +6,7 @@ on:
       dry-run:
         description: >
           Run in dry-run mode and print the generated changelog to stdout.
-        required: false
+        required: true
         type: boolean
       package:
         description: >
@@ -70,8 +70,13 @@ jobs:
       - name: Output changelog to stdout
         if: "${{ inputs.dry-run == true }}"
         run: |
-          echo "GET_NEXT=$(uv run cz bump --yes --get-next)" >> $GITHUB_ENV
-          uv run cz bump --yes --dry-run
+          if [[ "$INC" == "AUTO" || -z "$INC" ]]; then
+            uv run cz bump --yes --dry-run
+            echo "GET_NEXT=$(uv run cz bump --yes --get-next)" >> $GITHUB_ENV
+          else
+            uv run cz bump --yes --increment "$INC" --dry-run
+            echo "GET_NEXT=$(uv run cz bump --yes --get-next --increment $INC)" >> $GITHUB_ENV
+          fi
 
       - name: Upload changelog artifact
         if: ${{ inputs.dry-run == true }}
