@@ -285,6 +285,24 @@ Released on 2026-05-13
 - add commitizen
 - init projectx
 
+## release/orchestrator/3.0.0
+Released on 2026-05-15
+
+### Feat
+
+- Rename changelog output step to bump output ([`0376dcb`](https://github.com/tmiklu/projectx/commit/0376dcbc4e625c44190b39204091234964e79383)) [`tmiklu`](https://github.com/tmiklu)
+- Fix syntax for conditional branch creation ([`c21c38c`](https://github.com/tmiklu/projectx/commit/c21c38c03eaa7e035885d4ebb76e977331cae5eb)) [`tmiklu`](https://github.com/tmiklu)
+
+
+## release/orchestrator/2.8.1
+Released on 2026-05-15
+
+### Fix
+
+- Ensure release branch exists for minor/major versions ([`d6edd1f`](https://github.com/tmiklu/projectx/commit/d6edd1fab6213df7b4d035f9a1f269b607b71d33)) [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## release/orchestrator/2.9.0
 Released on 2026-05-15
 
