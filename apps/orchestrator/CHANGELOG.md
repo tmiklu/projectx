@@ -285,6 +285,42 @@ Released on 2026-05-13
 - add commitizen
 - init projectx
 
+## release/orchestrator/4.0.0
+Released on 2026-05-15
+
+### Feat
+
+- Make 'dry-run' input optional in release workflow ([`d81a232`](https://github.com/tmiklu/projectx/commit/d81a2320d589ce0c4d21599b18a3f3016dd1ed52)) [`tmiklu`](https://github.com/tmiklu)
+- Update release workflow for changelog output ([`3e6f5af`](https://github.com/tmiklu/projectx/commit/3e6f5af710b1090bb9ff43a5f2a0d6470abed2c0)) [`tmiklu`](https://github.com/tmiklu)
+- Fix dry-run step in release workflow ([`1d2d47d`](https://github.com/tmiklu/projectx/commit/1d2d47de16d9a3d88903feb881624d0bc07cade5)) [`tmiklu`](https://github.com/tmiklu)
+- Update release workflow to use GITHUB_OUTPUT ([`8150b14`](https://github.com/tmiklu/projectx/commit/8150b149515163e93679d30c93df625a024142b6)) [`tmiklu`](https://github.com/tmiklu)
+
+### Fix
+
+- branch creation command in release workflow ([`a575a66`](https://github.com/tmiklu/projectx/commit/a575a6678d4e2c0284b6fac0709e935e2c4bf35d)) [`tmiklu`](https://github.com/tmiklu)
+- Implement git tag collision detection ([`0912c02`](https://github.com/tmiklu/projectx/commit/0912c02e7803dc8b7ad1a5b995ae3b1259100508)) [`tmiklu`](https://github.com/tmiklu)
+- Define GET_TAG for checking git tag collisions ([`0218c9a`](https://github.com/tmiklu/projectx/commit/0218c9a5249d7516652b6a7c47ec76d94d9fb048)) [`tmiklu`](https://github.com/tmiklu)
+- Update tag collision check in release workflow ([`9797526`](https://github.com/tmiklu/projectx/commit/979752698fa59244d59649b1e79419bf9bf0b00e)) [`tmiklu`](https://github.com/tmiklu)
+- git tag collision check command ([`8dca1b7`](https://github.com/tmiklu/projectx/commit/8dca1b71b45306984fb36028deb003b683b40bc2)) [`tmiklu`](https://github.com/tmiklu)
+- git tag collision check syntax ([`32ecb88`](https://github.com/tmiklu/projectx/commit/32ecb88595e5ffc0722bb781f4f35fb4d2ed1f3b)) [`tmiklu`](https://github.com/tmiklu)
+- regex for checking git tag collision ([`8ca017b`](https://github.com/tmiklu/projectx/commit/8ca017bec903415983601c3e8c6d08b656cfaa3e)) [`tmiklu`](https://github.com/tmiklu)
+- git tag collision check in release workflow ([`84c0690`](https://github.com/tmiklu/projectx/commit/84c06908913fba37c8f7ec4ba84a1d2d5466b970)) [`tmiklu`](https://github.com/tmiklu)
+- git tag collision check in release workflow ([`64fef91`](https://github.com/tmiklu/projectx/commit/64fef91b2a9f7bb3a8158a82790d88cef57d6388)) [`tmiklu`](https://github.com/tmiklu)
+- Refactor git tag collision check in release workflow ([`5225b3e`](https://github.com/tmiklu/projectx/commit/5225b3ed84340dde3881ae4a61ff3fe0c7c787ab)) [`tmiklu`](https://github.com/tmiklu)
+- Refactor dry-run logic in release workflow ([`ce067c9`](https://github.com/tmiklu/projectx/commit/ce067c91f8aef6257be662f25ffda064086d2eff)) [`tmiklu`](https://github.com/tmiklu)
+- changelog dry run command in release workflow ([`85f34f4`](https://github.com/tmiklu/projectx/commit/85f34f4859ebb2eee3425ac6a93de1653157456c)) [`tmiklu`](https://github.com/tmiklu)
+- Modify changelog output in release.yml ([`d2ef900`](https://github.com/tmiklu/projectx/commit/d2ef9008c56ce3ba987b11fa9c536da721771fb4)) [`tmiklu`](https://github.com/tmiklu)
+- git tag collision check in release workflow ([`a6c5ec3`](https://github.com/tmiklu/projectx/commit/a6c5ec3f7e14557c595d5fcaeafb1ffabed48b4f)) [`tmiklu`](https://github.com/tmiklu)
+- regex for checking git tag collisions ([`ecf5b2c`](https://github.com/tmiklu/projectx/commit/ecf5b2ca4be25bf35f6f9ca29a2392454fd13e2c)) [`tmiklu`](https://github.com/tmiklu)
+- Make 'dry-run' input required and adjust logic ([`83cb3ce`](https://github.com/tmiklu/projectx/commit/83cb3ced8707d6c6d4d87de875e10dfc894e4c1b)) [`tmiklu`](https://github.com/tmiklu)
+- Improve git tag collision check message ([`ec99cb7`](https://github.com/tmiklu/projectx/commit/ec99cb7443801549b690fa0656acfe6224ab2e3b)) [`tmiklu`](https://github.com/tmiklu)
+- Update release workflow to not create changelog file ([`849dd62`](https://github.com/tmiklu/projectx/commit/849dd6296ec011a676818635b31d1d534486061d)) [`tmiklu`](https://github.com/tmiklu)
+- Remove blank line in release workflow ([`138c2ff`](https://github.com/tmiklu/projectx/commit/138c2ffe3314373663306246af15cb95655eb067)) [`tmiklu`](https://github.com/tmiklu)
+- Refactor release workflow to remove next_version output ([`10ed289`](https://github.com/tmiklu/projectx/commit/10ed2896016a13346fead15b3e6afecc0a1a17dc)) [`tmiklu`](https://github.com/tmiklu)
+- Refactor release workflow to simplify environment setup ([`0b1bb55`](https://github.com/tmiklu/projectx/commit/0b1bb55f434fe996c33ac35420c4aa9eee692654)) [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## release/orchestrator/3.1.0
 Released on 2026-05-15
 
