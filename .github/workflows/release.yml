@@ -142,8 +142,8 @@ jobs:
       - name: Ensure release branch exists (minor/major only)
         run: |
           if [[ $DETECT_INCREMENT == "MAJOR" || $DETECT_INCREMENT == "MINOR" ]]; then
-            echo "create branch -> release/${{ inputs.package }}/$GET_NEXT"
-            git checkout main ; git checkout -b "release/${{ inputs.package }}/$GET_NEXT"
+            echo "create branch -> release/${{ inputs.package }}/${{ env.GET_NEXT }}"
+            git checkout main ; git checkout -b "release/${{ inputs.package }}/${{ env.GET_NEXT }}"
             git status
           fi
 
