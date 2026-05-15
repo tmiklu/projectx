@@ -129,16 +129,15 @@ jobs:
           INC=${{ inputs.increment }}
           if [[ "$INC" == "AUTO" || -z "$INC" ]]; then
             uv run cz bump --yes | tee changelog.md
-            DETECT_INCREMENT=$(grep -Eo 'MAJOR|MINOR|PATCH' changelog.md)
-            echo DETECT_INCREMENT >> $GITHUB_ENV
+            echo "DETECT_INCREMENT=$(grep -Eo 'MAJOR|MINOR|PATCH' changelog.md)" >> $GITHUB_ENV
           else
             uv run cz bump --yes --increment "$INC"
             echo "DETECT_INCREMENT=$INC" >> $GITHUB_ENV
           fi
-          env
 
       - name: Push commits with tags
-        run: | 
+        run: |
+          env
           git push && git push --tags
 
       - name: Create GitHub Release
