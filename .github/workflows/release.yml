@@ -71,7 +71,7 @@ jobs:
         if: "${{ inputs.dry-run == true }}"
         run: |
           echo "GET_NEXT=$(uv run cz bump --yes --get-next)" >> $GITHUB_ENV
-          uv run cz bump --yes --dry-run | tee changelog-dry-run.md
+          uv run cz bump --yes --dry-run
 
       - name: Upload changelog artifact
         if: ${{ inputs.dry-run == true }}
