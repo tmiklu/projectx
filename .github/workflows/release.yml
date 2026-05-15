@@ -70,6 +70,7 @@ jobs:
       - name: Dry run output changelog to stdout
         if: "${{ inputs.dry-run == true }}"
         run: |
+          echo "GET_NEXT=$(uv run cz bump --yes --get-next)" >> $GITHUB_ENV
           uv run cz bump --yes --dry-run | tee changelog-dry-run.md
 
       - name: Upload changelog artifact
