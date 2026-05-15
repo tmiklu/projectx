@@ -285,6 +285,15 @@ Released on 2026-05-13
 - add commitizen
 - init projectx
 
+## release/orchestrator/4.0.2
+Released on 2026-05-15
+
+### Fix
+
+- Enhance print statement for new feature clarity ([`67bfd7a`](https://github.com/tmiklu/projectx/commit/67bfd7aff0bd6d489cbed51f7e5e0590ab2a6ebe)) [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## release/orchestrator/4.0.1
 Released on 2026-05-15
 
