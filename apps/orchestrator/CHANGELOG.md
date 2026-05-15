@@ -285,6 +285,15 @@ Released on 2026-05-13
 - add commitizen
 - init projectx
 
+## release/orchestrator/7.0.0
+Released on 2026-05-15
+
+### Feat
+
+- Simplify changelog output and upload steps ([`8b83442`](https://github.com/tmiklu/projectx/commit/8b83442a656e01ca1edd7897b9d519d0b5bc2d05)) [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## release/orchestrator/6.1.0
 Released on 2026-05-15
 
