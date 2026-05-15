@@ -284,3 +284,118 @@ Released on 2026-05-13
 - **main.py**: add first feature print statement
 - add commitizen
 - init projectx
+
+## release/orchestrator/2.6.0
+Released on 2026-05-15
+
+### Feat
+
+- Rename project from 'abc' to 'ai-orchestrator' ([`b1d7d5c`](https://github.com/tmiklu/projectx/commit/b1d7d5c735e07bc999e1cd75d652c764368fdf99)) [`tmiklu`](https://github.com/tmiklu)
+
+### Fix
+
+- Rename package option from 'ai-orchestrator' to 'orchestrator' ([`e74f0e8`](https://github.com/tmiklu/projectx/commit/e74f0e816ea9c1b0c4fb13fd1e32cc1d5a58da35)) [`tmiklu`](https://github.com/tmiklu)
+- Update tag format in pyproject.toml ([`7ad9c88`](https://github.com/tmiklu/projectx/commit/7ad9c882020648687ec5f70a4e04c203afbb2397)) [`tmiklu`](https://github.com/tmiklu)
+- Rename orchestrator to ai-orchestrator in release.yml ([`e377d39`](https://github.com/tmiklu/projectx/commit/e377d3969ed34408df6d85acc7120479b3917afe)) [`tmiklu`](https://github.com/tmiklu)
+- Update tag_format in pyproject.toml ([`00e85d9`](https://github.com/tmiklu/projectx/commit/00e85d9244e8d812baa8d59cfc03953c7796be2c)) [`tmiklu`](https://github.com/tmiklu)
+- Add condition for git tag collision check ([`c5e2cf8`](https://github.com/tmiklu/projectx/commit/c5e2cf81293456beb515445a159e3d9265476c9d)) [`tmiklu`](https://github.com/tmiklu)
+- spacing in GitHub release tag definition ([`20ebdc1`](https://github.com/tmiklu/projectx/commit/20ebdc12c0628f2ee85dffb431be011da17b442b)) [`tmiklu`](https://github.com/tmiklu)
+
+
+## release/orchestrator/2.5.0
+Released on 2026-05-15
+
+### BREAKING CHANGE
+
+- new release ([`bf5eaa6`](https://github.com/tmiklu/projectx/commit/bf5eaa6dd366fe21999774ec26ea808157a7c0d5)) [`tmiklu`](https://github.com/tmiklu)
+
+### Feat
+
+- Update release tag format in workflow ([`4ad36a6`](https://github.com/tmiklu/projectx/commit/4ad36a6d96ce3e13ca5a860f78d334ca8d38ba66)) [`tmiklu`](https://github.com/tmiklu)
+- Implement git tag collision check ([`368f135`](https://github.com/tmiklu/projectx/commit/368f135ed5d4221a0d66fbdde8d54e95f446aa10)) [`tmiklu`](https://github.com/tmiklu)
+- Check for git tag collisions in release workflow ([`2641267`](https://github.com/tmiklu/projectx/commit/2641267164c0c1c045f73ac6d7124be59497d25f)) [`tmiklu`](https://github.com/tmiklu)
+- Refactor CHANGELOG to use dynamic GitHub URL ([`83e615f`](https://github.com/tmiklu/projectx/commit/83e615fced7ce216d13fc99366647772aad6eae1)) [`tmiklu`](https://github.com/tmiklu)
+- Add author info to CHANGELOG entries ([`8a88f17`](https://github.com/tmiklu/projectx/commit/8a88f174e760ec3a98857dcb52263bc23b8ea733)) [`tmiklu`](https://github.com/tmiklu)
+- Enhance release workflow with changelog dry run ([`548bc33`](https://github.com/tmiklu/projectx/commit/548bc33fc015b351b53d5eaac35080e3edf44707)) [`tmiklu`](https://github.com/tmiklu)
+- Fix repository link in CHANGELOG.md.j2 ([`bd4b4cc`](https://github.com/tmiklu/projectx/commit/bd4b4cc187b8f0fad89c0bb2737f2e0e52a9fa03)) [`tmiklu`](https://github.com/tmiklu)
+- Refactor release notes extraction logic in release.yml ([`c243d3e`](https://github.com/tmiklu/projectx/commit/c243d3e98448eaaba87c162dd47bcd811d1022ab)) [`tmiklu`](https://github.com/tmiklu)
+- Create CHANGELOG.md.j2 for release notes ([`049d511`](https://github.com/tmiklu/projectx/commit/049d511557a23a3e31539f3b36c2403a6525dd84)) [`tmiklu`](https://github.com/tmiklu)
+- Add print statement for breaking change notice ([`18b69b9`](https://github.com/tmiklu/projectx/commit/18b69b916408f216897d2c5e2b319cd13dbcbd8a)) [`tmiklu`](https://github.com/tmiklu)
+- Clean up release.yml by removing commented lines ([`4fe6a46`](https://github.com/tmiklu/projectx/commit/4fe6a462faae9139511c635e91610a9ac0885b67)) [`tmiklu`](https://github.com/tmiklu)
+- Set GH_TOKEN for GitHub Release step ([`eeedb33`](https://github.com/tmiklu/projectx/commit/eeedb332ad98c926f45562b8329404c893381d6c)) [`tmiklu`](https://github.com/tmiklu)
+- Modify release.yml to comment out token and permissions ([`64c5846`](https://github.com/tmiklu/projectx/commit/64c58460aa59c75d7d9633eaf5c0deaff02e23ce)) [`tmiklu`](https://github.com/tmiklu)
+- Update feature version in main.py ([`ff8c7af`](https://github.com/tmiklu/projectx/commit/ff8c7af1bbec6b176d181519cf87c6681699f10f)) [`tmiklu`](https://github.com/tmiklu)
+- Extend new feature with additional print statement ([`e64c976`](https://github.com/tmiklu/projectx/commit/e64c976360acff85ab17f37d47adb867c9934d7e)) [`tmiklu`](https://github.com/tmiklu)
+- Add print statement for new feature 2.0.0 ([`013a8ac`](https://github.com/tmiklu/projectx/commit/013a8ac5aa5523dd9e8fc68c913dd68075369a79)) [`tmiklu`](https://github.com/tmiklu)
+- Update breaking change message for clarity ([`d3d7077`](https://github.com/tmiklu/projectx/commit/d3d707700d56d014e4f8d5287d8c145b4e52882a)) [`tmiklu`](https://github.com/tmiklu)
+- Refactor breaking change message in main.py ([`c0333cf`](https://github.com/tmiklu/projectx/commit/c0333cf80b26d1ca6a5cb67d0b29cad5122893e8)) [`tmiklu`](https://github.com/tmiklu)
+- Update email contact print statement for clarity ([`19bbbbb`](https://github.com/tmiklu/projectx/commit/19bbbbb97d08e206d9fb210a62c7c64c39cec274)) [`tmiklu`](https://github.com/tmiklu)
+- new major release ([`bf5eaa6`](https://github.com/tmiklu/projectx/commit/bf5eaa6dd366fe21999774ec26ea808157a7c0d5)) [`tmiklu`](https://github.com/tmiklu)
+- another breaking change ([`f2109a9`](https://github.com/tmiklu/projectx/commit/f2109a974b0b5500fab0553ae36449c3bef24fe4)) [`tmiklu`](https://github.com/tmiklu)
+- add breaking change ([`efd8ed8`](https://github.com/tmiklu/projectx/commit/efd8ed8c0cb68a84a948260d2e8cf528a0086778)) [`tmiklu`](https://github.com/tmiklu)
+- Add spam protection feature to the login system ([`f7a25ed`](https://github.com/tmiklu/projectx/commit/f7a25ed613857bd77f9c0821678a275c196a302b)) [`tmiklu`](https://github.com/tmiklu)
+- Fix typo in new login form message ([`169169d`](https://github.com/tmiklu/projectx/commit/169169ddb3d56c94331c2b03fe963dbfa49f02d6)) [`tmiklu`](https://github.com/tmiklu)
+- Add new print statement for login form ([`1f61601`](https://github.com/tmiklu/projectx/commit/1f61601625e018fa0be69798a8f95745d4bfad44)) [`tmiklu`](https://github.com/tmiklu)
+- Add calendar option to main.py ([`fd381ba`](https://github.com/tmiklu/projectx/commit/fd381ba799f3f4eccb36b976dd853ab1c718f6a9)) [`tmiklu`](https://github.com/tmiklu)
+- Add email contact feature ([`ca9d580`](https://github.com/tmiklu/projectx/commit/ca9d580fb9cbe46bb4085035e12e09899d04d9cc)) [`tmiklu`](https://github.com/tmiklu)
+- Add SSO login feature to main.py ([`eabc95d`](https://github.com/tmiklu/projectx/commit/eabc95d572aad3552a12639978793d257ae2a93e)) [`tmiklu`](https://github.com/tmiklu)
+- Add login feature print statement ([`ad5414f`](https://github.com/tmiklu/projectx/commit/ad5414f87d8c2fd47064571c1a2ff8c156f83c52)) [`tmiklu`](https://github.com/tmiklu)
+- Remove third feature print statement ([`26c6f8e`](https://github.com/tmiklu/projectx/commit/26c6f8ec12d2c7b991a2417c1e7ec90daf2edfcd)) [`tmiklu`](https://github.com/tmiklu)
+- Add third feature print statement ([`28f6eb7`](https://github.com/tmiklu/projectx/commit/28f6eb7d0c8875faa0099f949eed68a75b99c940)) [`tmiklu`](https://github.com/tmiklu)
+- Add second feature print statement ([`4809f80`](https://github.com/tmiklu/projectx/commit/4809f801e5d4f48df015bb8722c889ddfe966fbe)) [`tmiklu`](https://github.com/tmiklu)
+- add first feature ([`38ecccb`](https://github.com/tmiklu/projectx/commit/38ecccb2535558bc38e4013cbdb9533f6508acb8)) [`tmiklu`](https://github.com/tmiklu)
+- Add third feature print statement ([`7e00d8f`](https://github.com/tmiklu/projectx/commit/7e00d8fb2f49cd61c2dbcb48a33b1c3f294c5fc0)) [`tmiklu`](https://github.com/tmiklu)
+- Add second feature print statement ([`338eb44`](https://github.com/tmiklu/projectx/commit/338eb4452b2d9f4d40f42493bb7b23d6826a0a46)) [`tmiklu`](https://github.com/tmiklu)
+- add first feature print statement ([`cc1cab7`](https://github.com/tmiklu/projectx/commit/cc1cab768514fa63780c92812819a648dca4ca16)) [`tmiklu`](https://github.com/tmiklu)
+- add commitizen ([`df8337b`](https://github.com/tmiklu/projectx/commit/df8337be745a6d309466777b87770328ed0ca16b)) [`tmiklu`](https://github.com/tmiklu)
+- init projectx ([`898f3de`](https://github.com/tmiklu/projectx/commit/898f3de842ec6cbfe29224f85ff8b7f4cfe5fce0)) [`tmiklu`](https://github.com/tmiklu)
+
+### Fix
+
+- Modify GET_NEXT assignment in release.yml ([`a5e3007`](https://github.com/tmiklu/projectx/commit/a5e300757591e8a744c8d9347b8e5ccd411b0579)) [`tmiklu`](https://github.com/tmiklu)
+- Fix command execution for version bump in release.yml ([`2b323b5`](https://github.com/tmiklu/projectx/commit/2b323b523d103b9fbd230d878d69118814a16d7c)) [`tmiklu`](https://github.com/tmiklu)
+- Fix tag collision check in release workflow ([`b736d74`](https://github.com/tmiklu/projectx/commit/b736d747c63edd01d9c3597a5a09017d50f21598)) [`tmiklu`](https://github.com/tmiklu)
+- Fix git tag collision check command ([`ea1b6f4`](https://github.com/tmiklu/projectx/commit/ea1b6f403f3af8aae2dfa6f22fc26ccbea8bd7cb)) [`tmiklu`](https://github.com/tmiklu)
+- Fix indentation for git tag collision check step ([`9abb290`](https://github.com/tmiklu/projectx/commit/9abb2901af8766c62fae839e91ffb056875c8446)) [`tmiklu`](https://github.com/tmiklu)
+- Fix formatting of changelog entries ([`4b1f08a`](https://github.com/tmiklu/projectx/commit/4b1f08aeaa6e43fcb93224bb4c8f25468c55d13d)) [`tmiklu`](https://github.com/tmiklu)
+- Fix author link format in CHANGELOG template ([`39447ac`](https://github.com/tmiklu/projectx/commit/39447ac67b25e2d29814b90fd693be66b6f7ef4f)) [`tmiklu`](https://github.com/tmiklu)
+- Remove 'archive' option from upload-artifact step ([`e37b8b0`](https://github.com/tmiklu/projectx/commit/e37b8b070f1f9c1cd788d777e927d2d89811da9e)) [`tmiklu`](https://github.com/tmiklu)
+- Update upload-artifact action to version v7 ([`c72b8dd`](https://github.com/tmiklu/projectx/commit/c72b8dd2a6db2254da162cf567ae39cdab869acb)) [`tmiklu`](https://github.com/tmiklu)
+- Upgrade actions/checkout from v4 to v5 ([`8ef16ba`](https://github.com/tmiklu/projectx/commit/8ef16ba029b035c53fc7f7fbc4ae920fbf103670)) [`tmiklu`](https://github.com/tmiklu)
+- Fix formatting in CHANGELOG template ([`46047e0`](https://github.com/tmiklu/projectx/commit/46047e017d06bcad62b4151d34bbccbff064481a)) [`tmiklu`](https://github.com/tmiklu)
+- Update changelog dry run command to use tee ([`a3bb9bb`](https://github.com/tmiklu/projectx/commit/a3bb9bb5e52c2a5379d6185d383f5a8d867883bf)) [`tmiklu`](https://github.com/tmiklu)
+- Fix path for changelog-dry-run artifact ([`1a1ead4`](https://github.com/tmiklu/projectx/commit/1a1ead42425003382eb775ae94c5f723e146f62f)) [`tmiklu`](https://github.com/tmiklu)
+- Update changelog artifact name to include .md extension ([`5fbb490`](https://github.com/tmiklu/projectx/commit/5fbb490b1eb03ba37fdef964c8a218933a81a1ab)) [`tmiklu`](https://github.com/tmiklu)
+- revert ([`5f1f9ae`](https://github.com/tmiklu/projectx/commit/5f1f9ae703d465d7bbb67b66d7c6b1f3cb60a06d)) [`tmiklu`](https://github.com/tmiklu)
+- Clean up release.yml by removing commented TAG line ([`0fefd67`](https://github.com/tmiklu/projectx/commit/0fefd67aa30c20b7c21b460fd0de1a2f1aaa2e21)) [`tmiklu`](https://github.com/tmiklu)
+- Clean up release.yml by removing comments ([`9979019`](https://github.com/tmiklu/projectx/commit/9979019104fa21d033537afc94e098075f53cddf)) [`tmiklu`](https://github.com/tmiklu)
+- Remove repo_url from commitizen settings ([`5786cb5`](https://github.com/tmiklu/projectx/commit/5786cb57d8e876be301fa050cefc912d71b98ab4)) [`tmiklu`](https://github.com/tmiklu)
+- Fix link format for commit SHA in CHANGELOG ([`ac90729`](https://github.com/tmiklu/projectx/commit/ac90729fdb8b81b1dae797a2bd69027ec06520f1)) [`tmiklu`](https://github.com/tmiklu)
+- Update commit link format in CHANGELOG template ([`8857e97`](https://github.com/tmiklu/projectx/commit/8857e975664a8435ddd30c98f13d0ff798fb3cc4)) [`tmiklu`](https://github.com/tmiklu)
+- Enhance changelog format with release date ([`09ea8f7`](https://github.com/tmiklu/projectx/commit/09ea8f7e092a7d9cd6ae7b179696d4538635e99c)) [`tmiklu`](https://github.com/tmiklu)
+- Refactor changelog output logic in release.yml ([`a51b55f`](https://github.com/tmiklu/projectx/commit/a51b55f79d5f27f9dd1c24a4f54d3d0d9b1c2aa1)) [`tmiklu`](https://github.com/tmiklu)
+- Simplify bump logic in release workflow ([`b1d196c`](https://github.com/tmiklu/projectx/commit/b1d196ce1dbfa598d652c39683018f8583aab945)) [`tmiklu`](https://github.com/tmiklu)
+- Add repo_url to commitizen in pyproject.toml ([`6edb75f`](https://github.com/tmiklu/projectx/commit/6edb75fa6fcd0680a29b56d75ea9f5778bf13041)) [`tmiklu`](https://github.com/tmiklu)
+- Clean up release workflow by removing comments ([`b8ef890`](https://github.com/tmiklu/projectx/commit/b8ef8902591c22d66c8c3a96694fb85791543278)) [`tmiklu`](https://github.com/tmiklu)
+- Fix working-directory reference in release workflow ([`c1d9556`](https://github.com/tmiklu/projectx/commit/c1d9556c7c8e7844e67b7a268a6dde81f3680560)) [`tmiklu`](https://github.com/tmiklu)
+- Set default shell and working directory for jobs ([`72d7600`](https://github.com/tmiklu/projectx/commit/72d7600200a32718b6cdc7196c4eb8f7196d7eda)) [`tmiklu`](https://github.com/tmiklu)
+- Fix working directory reference in release workflow ([`2561816`](https://github.com/tmiklu/projectx/commit/25618162ce8d594fcade3576fd9be92afbd9a86f)) [`tmiklu`](https://github.com/tmiklu)
+- Refactor working directory settings in release workflow ([`40199e8`](https://github.com/tmiklu/projectx/commit/40199e82bdecc1af31c4fab1e6b79b22ee6dd1f4)) [`tmiklu`](https://github.com/tmiklu)
+- Update print statements for clarity and fixes ([`98938f0`](https://github.com/tmiklu/projectx/commit/98938f08eccab9bb3ad52f102894108fc2a5ba6e)) [`tmiklu`](https://github.com/tmiklu)
+- Remove GITHUB_TOKEN from release workflow ([`3fce6a8`](https://github.com/tmiklu/projectx/commit/3fce6a85166f2574fd4907617fa1c884838e1d29)) [`tmiklu`](https://github.com/tmiklu)
+- Modify CI bot environment variables ([`d769497`](https://github.com/tmiklu/projectx/commit/d7694974bd62f814d58c8dc6dfd66e29520f3d5b)) [`tmiklu`](https://github.com/tmiklu)
+- Update CI bot names in release workflow ([`9161a71`](https://github.com/tmiklu/projectx/commit/9161a710345a0a7def4e1f5c33b3349ffe8c8a1d)) [`tmiklu`](https://github.com/tmiklu)
+- Update CI bot names and email in release workflow ([`9dc8485`](https://github.com/tmiklu/projectx/commit/9dc8485f2f42294c791e84f7122091a10ba1ed19)) [`tmiklu`](https://github.com/tmiklu)
+- Add environment variable for GH_TOKEN in release workflow ([`e2752f1`](https://github.com/tmiklu/projectx/commit/e2752f11d2f070dd20924b9b6b40b4288023e36b)) [`tmiklu`](https://github.com/tmiklu)
+- Update CI bot names and email in release workflow ([`9ae20b7`](https://github.com/tmiklu/projectx/commit/9ae20b758ec431b6deee6bbfba8bc5a916b5fc2c)) [`tmiklu`](https://github.com/tmiklu)
+- Fix print statement for new feature extension ([`89c39f9`](https://github.com/tmiklu/projectx/commit/89c39f9349bd4e6a4392d845980ba5672a5da5a9)) [`tmiklu`](https://github.com/tmiklu)
+- Fix typo in new login form print statement ([`26007a6`](https://github.com/tmiklu/projectx/commit/26007a6bfd31c71d8a1fb5fe683bdb35177ec715)) [`tmiklu`](https://github.com/tmiklu)
+- Clarify contact form typo fix message ([`a423494`](https://github.com/tmiklu/projectx/commit/a42349492b672747568a48c4d6ccb69abdc88c1d)) [`tmiklu`](https://github.com/tmiklu)
+- message for breaking change in main.py ([`465abe1`](https://github.com/tmiklu/projectx/commit/465abe1f0e60671a0aeb8c0a0942bf3101d6bd35)) [`tmiklu`](https://github.com/tmiklu)
+- Fix message for another breaking change ([`01eb1ed`](https://github.com/tmiklu/projectx/commit/01eb1ed5deca2ecfc67fcac53bc39dd7661651ce)) [`tmiklu`](https://github.com/tmiklu)
+- Fix message for breaking change notification ([`27ec02a`](https://github.com/tmiklu/projectx/commit/27ec02ad4a00de5384b434df3bcf901c8a18166b)) [`tmiklu`](https://github.com/tmiklu)
+- Fix spam protection message in main.py ([`4fd8810`](https://github.com/tmiklu/projectx/commit/4fd8810884ec7d5af5a0742a6e0e2224590f375a)) [`tmiklu`](https://github.com/tmiklu)
+- Fix typo in calendar option print statement ([`5b7f119`](https://github.com/tmiklu/projectx/commit/5b7f11915abe9787698c5a5602c83b5f1a11aac5)) [`tmiklu`](https://github.com/tmiklu)
+- Correct typo in contact form print statement ([`b4cf6c4`](https://github.com/tmiklu/projectx/commit/b4cf6c497dadeaace2012903bd9357cf5347bf39)) [`tmiklu`](https://github.com/tmiklu)
+
+
