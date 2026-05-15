@@ -82,9 +82,7 @@ jobs:
 
       - name: Check git tag collision
         run: |
-          env
-          git --no-pager tag "release/${{ inputs.package }}/${{ env.GET_NEXT }}"
-          #[[ $? -eq "0" ]] && echo "No tag collision." || echo "Git tag collision detected!" ; exit 1
+          git rev-parse "release/${{ inputs.package }}/${{ env.GET_NEXT }}"
 
       - name: Upload changelog artifact
         if: ${{ inputs.dry-run == true }}
