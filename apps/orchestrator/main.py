@@ -3,7 +3,7 @@ def main():
     print("second feature.")
     print("login feature.")
     print("contact form, fix typo in form, fix here!")
-    print("add sso login for system.")
+    print("add sso login for system." Breaking change!)
     print("add email contact, extend feature. Fix.")
     print("add calendar option. Fix!")
     print("new login form, extended! Fix here too.")
