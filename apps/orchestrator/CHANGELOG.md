@@ -285,6 +285,16 @@ Released on 2026-05-13
 - add commitizen
 - init projectx
 
+## release/orchestrator/9.3.0
+📅 Released on 2026-05-18
+
+### ✨ Feat
+
+- Update changelog file references in release workflow ([`2695de7`](https://github.com/tmiklu/projectx/commit/2695de7b0ab2b3b076db5d17f0406494f57e619d)) 👤 [`tmiklu`](https://github.com/tmiklu)
+- awk command for extracting changelog entries ([`08c3698`](https://github.com/tmiklu/projectx/commit/08c3698e7cf73110a891c2f0cc8ad8b94deec8fc)) 👤 [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## release/orchestrator/9.2.0
 📅 Released on 2026-05-18
 
