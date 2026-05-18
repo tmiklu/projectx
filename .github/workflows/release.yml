@@ -71,14 +71,14 @@ jobs:
       - name: Output changelog to stdout
         run: |
           CHANGE_LOG_DRY_RUN="changelog-dry-run.md"
-          CZ_BUMP=$(uv run cz bump --yes)
+          CZ_BUMP="uv run cz bump --yes"
           
           if [[ "$INC" == "AUTO" || -z "$INC" ]]; then
             echo "GET_NEXT=$($CZ_BUMP --get-next)" >> $GITHUB_ENV
             $CZ_BUMP --dry-run | tee $CHANGE_LOG_DRY_RUN
           else
-            echo GET_NEXT=$(CZ_BUMP --get-next --increment "$INC") >> $GITHUB_ENV
-            CZ_BUMP --increment "$INC" --dry-run | tee $CHANGE_LOG_DRY_RUN
+            echo GET_NEXT=$($CZ_BUMP --get-next --increment "$INC") >> $GITHUB_ENV
+            $CZ_BUMP --increment "$INC" --dry-run | tee $CHANGE_LOG_DRY_RUN
           fi
 
       - name: Check git tag collision
