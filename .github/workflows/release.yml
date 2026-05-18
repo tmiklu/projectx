@@ -141,7 +141,8 @@ jobs:
       - name: Ensure release branch exists (minor/major only)
         if: ${{ env.DETECT_INCREMENT != 'PATCH' }}
         run: |
-            RELEASE_BRANCH="release/${{ inputs.package }}/${{ env.GET_NEXT }}"
+            RELEASE_X_TAG="$(echo $GET_NEXT | cut -d "." -f 1,2).x"
+            RELEASE_BRANCH="release/${{ inputs.package }}/$RELEASE_X_TAG"
             echo "create release branch $RELEASE_BRANCH"
             git push origin origin/main:"refs/heads/$RELEASE_BRANCH"
 
