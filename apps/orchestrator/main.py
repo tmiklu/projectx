@@ -11,9 +11,9 @@ def main():
     print("this is breaking change..., fix! Feature!")
     print("another breaking change, extend this feature!!! Fix here.")
 
-    print("New feature 1.6.0, Fix here! Fix. Perf. Perf.")
+    print("New feature 1.6.0, Fix here! Fix. Perf. Perf. FIX.")
 
-    print("Extend new feature, fix. FIX! Perf")
+    print("Extend new feature, fix. FIX! Perf, Feat, fix")
 
     print("breaking change")
 
