@@ -157,7 +157,7 @@ jobs:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: |
           RELEASE_TAG="release/${{ inputs.package }}/$(uv run cz version --project)"
-          RELEASE_NAME"${{ inputs.package }} $(uv run cz version --project)"
+          RELEASE_NAME="${{ inputs.package }} $(uv run cz version --project)"
 
           awk "
             BEGIN { found=0 }
