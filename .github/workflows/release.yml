@@ -159,12 +159,12 @@ jobs:
           RELEASE_TAG="release/${{ inputs.package }}/$(uv run cz version --project)"
           RELEASE_NAME="${{ inputs.package }} $(uv run cz version --project)"
 
-          awk "
+          awk -v release_tag=$RELEASE_TAG'
             BEGIN { found=0 }
-            \$0 ~ \"^## ${RELEASE_TAG}\" { found=1; next }
-            found && \$0 ~ \"^## \" { exit }
+            $0 ~ \"^## release_tag\" { found=1; next }
+            found && $0 ~ \"^## \" { exit }
             found { print }
-          " CHANGELOG.md > release.md
+          ' CHANGELOG.md > release.md
 
           gh release create "$RELEASE_TAG" \
             --title "$RELEASE_NAME" \
