@@ -161,7 +161,7 @@ jobs:
 
           awk "
             BEGIN { found=0 }
-            \$0 ~ \"^## ${TAG}\" { found=1; next }
+            \$0 ~ \"^## ${RELEASE_TAG}\" { found=1; next }
             found && \$0 ~ \"^## \" { exit }
             found { print }
           " CHANGELOG.md > release.md
