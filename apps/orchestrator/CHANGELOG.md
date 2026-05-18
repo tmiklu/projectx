@@ -285,6 +285,15 @@ Released on 2026-05-13
 - add commitizen
 - init projectx
 
+## 🚀 release/orchestrator/8.0.1
+📅 Released on 2026-05-18
+
+### 🐛 Fix
+
+- Comment out dry-run for cz bump in release workflow ([`787a56c`](https://github.com/tmiklu/projectx/commit/787a56c8da9b2f7f47d5a6d1e4656caf7439cf10)) 👤 [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## 🚀 release/orchestrator/8.0.0
 📅 Released on 2026-05-18
 
