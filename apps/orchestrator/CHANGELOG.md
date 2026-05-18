@@ -285,6 +285,15 @@ Released on 2026-05-13
 - add commitizen
 - init projectx
 
+## release/orchestrator/9.5.0
+📅 Released on 2026-05-18
+
+### ✨ Feat
+
+- Validate increment strategy in release.yml ([`faf802e`](https://github.com/tmiklu/projectx/commit/faf802e863f47854fac5f7c7031f62d7a89df908)) 👤 [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## release/orchestrator/9.4.2
 📅 Released on 2026-05-18
 
