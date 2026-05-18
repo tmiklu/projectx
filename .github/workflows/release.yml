@@ -125,7 +125,7 @@ jobs:
         run: |
           INC=${{ inputs.increment }}
           if [[ "$INC" == "AUTO" || -z "$INC" ]]; then
-            CHANGE_LOG = "changelog.md"
+            CHANGE_LOG="changelog.md"
             echo "GET_NEXT=$(uv run cz bump --yes --get-next)" >> $GITHUB_ENV
             uv run cz bump --yes | tee changelog.md
             echo "DETECT_INCREMENT=$(grep -Eo 'MAJOR|MINOR|PATCH' $CHANGE_LOG)" >> $GITHUB_ENV
