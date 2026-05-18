@@ -156,7 +156,8 @@ jobs:
         env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: |
-          TAG="release/${{ inputs.package }}/$(uv run cz version --project)"
+          RELEASE_TAG="release/${{ inputs.package }}/$(uv run cz version --project)"
+          RELEASE_NAME"${{ inputs.package }} $(uv run cz version --project)"
 
           awk "
             BEGIN { found=0 }
@@ -165,6 +166,6 @@ jobs:
             found { print }
           " CHANGELOG.md > release.md
 
-          gh release create "$TAG" \
-            --title "$TAG" \
+          gh release create "$RELEASE_TAG" \
+            --title "$RELEASE_NAME" \
             --notes-file release.md
