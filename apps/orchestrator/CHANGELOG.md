@@ -285,6 +285,15 @@ Released on 2026-05-13
 - add commitizen
 - init projectx
 
+## release/orchestrator/9.4.0
+📅 Released on 2026-05-18
+
+### ✨ Feat
+
+- increment detection in release workflow ([`8bb2651`](https://github.com/tmiklu/projectx/commit/8bb2651dc0db83818d99408b79a309312b7387fc)) 👤 [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## release/orchestrator/9.3.0
 📅 Released on 2026-05-18
 
