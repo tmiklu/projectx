@@ -285,6 +285,19 @@ Released on 2026-05-13
 - add commitizen
 - init projectx
 
+## release/orchestrator/8.1.0
+📅 Released on 2026-05-18
+
+### ✨ Feat
+
+- Update changelog header format ([`16ec127`](https://github.com/tmiklu/projectx/commit/16ec127a22219610b2be0a173bc978d722b5ebba)) 👤 [`tmiklu`](https://github.com/tmiklu)
+
+### ⚡ Perf
+
+- Refine print statement for new feature 1.6.0 ([`c8aeb7c`](https://github.com/tmiklu/projectx/commit/c8aeb7cd40aeb3d5cdbecf372e87797868545021)) 👤 [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## 🚀 release/orchestrator/8.0.2
 📅 Released on 2026-05-18
 
