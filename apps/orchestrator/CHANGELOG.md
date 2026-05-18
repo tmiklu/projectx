@@ -285,6 +285,15 @@ Released on 2026-05-13
 - add commitizen
 - init projectx
 
+## release/orchestrator/8.2.1
+📅 Released on 2026-05-18
+
+### 🐛 Fix
+
+- Update breaking change message for clarity ([`ae69de4`](https://github.com/tmiklu/projectx/commit/ae69de41e1978cb39c417726747693bd8706ec6a)) 👤 [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## release/orchestrator/8.2.0
 📅 Released on 2026-05-18
 
