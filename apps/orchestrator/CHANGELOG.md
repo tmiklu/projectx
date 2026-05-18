@@ -285,6 +285,15 @@ Released on 2026-05-13
 - add commitizen
 - init projectx
 
+## release/orchestrator/9.2.0
+📅 Released on 2026-05-18
+
+### ✨ Feat
+
+- awk command syntax in release workflow ([`7193f87`](https://github.com/tmiklu/projectx/commit/7193f87f35fdcbf61fd824292b823e832ffa7d2d)) 👤 [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## release/orchestrator/9.1.0
 📅 Released on 2026-05-18
 
