@@ -285,6 +285,16 @@ Released on 2026-05-13
 - add commitizen
 - init projectx
 
+## release/orchestrator/8.4.0
+📅 Released on 2026-05-18
+
+### ✨ Feat
+
+- variable assignment for CHANGE_LOG in release.yml ([`79f37ec`](https://github.com/tmiklu/projectx/commit/79f37ecc63cb95f52b5bdadb9d9cf20407ebc681)) 👤 [`tmiklu`](https://github.com/tmiklu)
+- changelog handling in release workflow ([`2b6c0bf`](https://github.com/tmiklu/projectx/commit/2b6c0bff86b419243b8e8a0cb39a2fca3fc457ba)) 👤 [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## release/orchestrator/8.3.0
 📅 Released on 2026-05-18
 
