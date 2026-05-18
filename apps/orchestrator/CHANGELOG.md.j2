@@ -4,7 +4,7 @@
 📅 Released on {{ release.date }}
 
 {% for change_type, changes in release.changes.items() %}
-### {% if change_type|lower is containing('feat') %}✨ {% elif change_type|lower is containing('fix') %}🐛 {% elif change_type|lower is containing('docs') %}📝 {% elif change_type|lower is containing('perf') %}⚡ {% else %}⚙️ {% endif %}{{ change_type }}
+### {% if 'feat' in change_type|lower %}✨ {% elif 'fix' in change_type|lower %}🐛 {% elif 'docs' in change_type|lower %}📝 {% elif 'perf' in change_type|lower %}⚡ {% else %}⚙️ {% endif %}{{ change_type }}
 
 {% for change in changes %}
 - {{ change.message }} ([`{{ change.sha1[:7] }}`]({{ github_url }}/tmiklu/projectx/commit/{{ change.sha1 }})) 👤 [`{{ change.author }}`]({{ github_url }}/{{ change.author }})
