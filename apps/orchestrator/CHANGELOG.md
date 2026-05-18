@@ -285,6 +285,15 @@ Released on 2026-05-13
 - add commitizen
 - init projectx
 
+## release/orchestrator/8.5.1
+📅 Released on 2026-05-18
+
+### 🐛 Fix
+
+- syntax error in release.yml for RELEASE_NAME ([`662974b`](https://github.com/tmiklu/projectx/commit/662974bbd29318194056694e7c0ab80a44cc0686)) 👤 [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## release/orchestrator/8.5.0
 📅 Released on 2026-05-18
 
