@@ -66,10 +66,9 @@ jobs:
           curl -LsSf https://astral.sh/uv/install.sh | sh
 
       - name: "Validate branch policy for hotfixes (prevent accidental minor bump)"
+        if: ${{ startsWith(github.ref_name, 'release/') || startsWith(github.ref_name, 'fix/') }}
         run: |
-          BRANCH_NAME="${{ github.ref_name }}"
-          
-          echo "Checking policy for branch: $BRANCH_NAME with strategy: $INC"
+          echo "Checking policy for branch: ${{ github.ref_name }} with strategy: $INC"
           
           if [[ "$BRANCH_NAME" =~ ^release/ || "$BRANCH_NAME" =~ ^fix/ ]]; then
             if [ "$INCREMENT_STRATEGY" = "auto" ]; then
