@@ -285,6 +285,24 @@ Released on 2026-05-13
 - add commitizen
 - init projectx
 
+## 🚀 release/orchestrator/7.1.0
+📅 Released on 2026-05-18
+
+### ✨ Feat
+
+- create emotikons in pipeline ([`9d78a4a`](https://github.com/tmiklu/projectx/commit/9d78a4ab633bfcea429840bb11d585b378b851d2)) 👤 [`tmiklu`](https://github.com/tmiklu)
+
+### 🐛 Fix
+
+- Refactor changelog template conditionals ([`95b10ef`](https://github.com/tmiklu/projectx/commit/95b10efff6edb7b684ad6829d9a38f71ec7ee5d9)) 👤 [`tmiklu`](https://github.com/tmiklu)
+- message for new feature 1.6.0 ([`fdfeb6a`](https://github.com/tmiklu/projectx/commit/fdfeb6a4cf38d89d24b7ad74c94f8b5aa0b1d126)) 👤 [`tmiklu`](https://github.com/tmiklu)
+
+### ⚡ Perf
+
+- Modify print statement for extended feature ([`5534b1d`](https://github.com/tmiklu/projectx/commit/5534b1d3dbc70d309bf628fc09d13a2e5285d28c)) 👤 [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## release/orchestrator/7.0.0
 Released on 2026-05-15
 
