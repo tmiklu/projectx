@@ -285,6 +285,15 @@ Released on 2026-05-13
 - add commitizen
 - init projectx
 
+## release/orchestrator/9.4.2
+📅 Released on 2026-05-18
+
+### ♻️  Refactor
+
+- hotfix branch policy validation ([`6f93944`](https://github.com/tmiklu/projectx/commit/6f93944e97362d6d5b131f7a6127caff2d1b7aa3)) 👤 [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## release/orchestrator/9.4.1
 📅 Released on 2026-05-18
 
