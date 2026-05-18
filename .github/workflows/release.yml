@@ -90,6 +90,8 @@ jobs:
             exit 1
           fi
 
+          echo "No tag collision detected for $GET_TAG"
+
       - name: Upload changelog artifact
         uses: actions/upload-artifact@v7
         with:
