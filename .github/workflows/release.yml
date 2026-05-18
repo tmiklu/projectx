@@ -129,7 +129,7 @@ jobs:
             uv run cz bump --yes
             echo "DETECT_INCREMENT=$(grep -Eo 'MAJOR|MINOR|PATCH' changelog.md)" >> $GITHUB_ENV
           else
-             echo "GET_NEXT=$(uv run cz bump --yes --get-next --increment "$INC")" >> $GITHUB_ENV
+            echo "GET_NEXT=$(uv run cz bump --yes --get-next --increment "$INC")" >> $GITHUB_ENV
             echo "DETECT_INCREMENT=$INC" >> $GITHUB_ENV
             uv run cz bump --yes --increment "$INC"
           fi
