@@ -285,6 +285,24 @@ Released on 2026-05-13
 - add commitizen
 - init projectx
 
+## release/orchestrator/8.5.0
+📅 Released on 2026-05-18
+
+### ✨ Feat
+
+- GitHub release tag and name assignment ([`0e2bff4`](https://github.com/tmiklu/projectx/commit/0e2bff4c83ed2c2be0597a950815b51893d14e1b)) 👤 [`tmiklu`](https://github.com/tmiklu)
+- Add log for no tag collision detection ([`329186c`](https://github.com/tmiklu/projectx/commit/329186c3a269cae7fb328fd55cbfa86b062487d6)) 👤 [`tmiklu`](https://github.com/tmiklu)
+- Add 'refactor' change type to changelog template ([`caf1faf`](https://github.com/tmiklu/projectx/commit/caf1faf157c4684c43b0b2c93e49b6ec65adcf41)) 👤 [`tmiklu`](https://github.com/tmiklu)
+- output redirection for GET_NEXT variable ([`455b2f5`](https://github.com/tmiklu/projectx/commit/455b2f5893df2c05c1bdc3d723b0c7b8a4c58278)) 👤 [`tmiklu`](https://github.com/tmiklu)
+
+### ♻️  Refactor
+
+- changelog bump command to use variable ([`1bf8500`](https://github.com/tmiklu/projectx/commit/1bf850008ea8c86bf88c3423a0c098a3c94b094e)) 👤 [`tmiklu`](https://github.com/tmiklu)
+- command substitution for changelog generation ([`1403eec`](https://github.com/tmiklu/projectx/commit/1403eece866d7367040bb050d7213a83c0976c6d)) 👤 [`tmiklu`](https://github.com/tmiklu)
+- Refactor changelog generation commands in release.yml ([`aa20303`](https://github.com/tmiklu/projectx/commit/aa2030333d5727d14a7602619cf7cdaf85269f79)) 👤 [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## release/orchestrator/8.4.0
 📅 Released on 2026-05-18
 
