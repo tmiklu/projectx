@@ -285,6 +285,21 @@ Released on 2026-05-13
 - add commitizen
 - init projectx
 
+## release/orchestrator/9.1.0
+📅 Released on 2026-05-18
+
+### ✨ Feat
+
+- Remove push triggers from release workflow ([`0b9d9e1`](https://github.com/tmiklu/projectx/commit/0b9d9e113bc1825706ddeaef49bd8b626499657b)) 👤 [`tmiklu`](https://github.com/tmiklu)
+- Add push triggers for main and release branches ([`bfe6b0d`](https://github.com/tmiklu/projectx/commit/bfe6b0dd1b746a300e98ee1fdca2879e88baf348)) 👤 [`tmiklu`](https://github.com/tmiklu)
+
+### 🐛 Fix
+
+- awk command to use variable for release tag ([`565e191`](https://github.com/tmiklu/projectx/commit/565e1916859b6b0bcfbd064be30d92f9ba039d2d)) 👤 [`tmiklu`](https://github.com/tmiklu)
+- concurrency group syntax in release.yml ([`4bbf20e`](https://github.com/tmiklu/projectx/commit/4bbf20e9794d340809ba5611539ea999dd22b665)) 👤 [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## release/orchestrator/9.0.0
 📅 Released on 2026-05-18
 
