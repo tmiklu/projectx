@@ -285,6 +285,23 @@ Released on 2026-05-13
 - add commitizen
 - init projectx
 
+## 🚀 release/orchestrator/8.0.0
+📅 Released on 2026-05-18
+
+### ✨ Feat
+
+- Add breaking change note for SSO login feature ([`bf703a4`](https://github.com/tmiklu/projectx/commit/bf703a4005b90d93371028b5e54f40dacfc1f622)) 👤 [`tmiklu`](https://github.com/tmiklu)
+
+### 🐛 Fix
+
+- typo in email contact feature message ([`bb2db06`](https://github.com/tmiklu/projectx/commit/bb2db064dcae38b3f3174623afa59000cfa0d881)) 👤 [`tmiklu`](https://github.com/tmiklu)
+
+### ⚡ Perf
+
+- Modify print statement for new feature 1.6.0 ([`516dab2`](https://github.com/tmiklu/projectx/commit/516dab28e923e95a79f070cf6965b8289028236e)) 👤 [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## 🚀 release/orchestrator/7.1.0
 📅 Released on 2026-05-18
 
