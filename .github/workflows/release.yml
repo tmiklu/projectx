@@ -45,6 +45,7 @@ env:
   GIT_COMMITTER_NAME: "projectx-ci-bot[bot]"
   EMAIL: "projectx-ci-bot[bot]@users.noreply.github.com"
   CZ_BUMP: "uv run cz bump --yes"
+  TMP_CHANGE_LOG: "changelog.tmp.md"
 
 jobs:    
   validate-release:
@@ -71,14 +72,12 @@ jobs:
 
       - name: Output changelog to stdout
         run: |
-          CHANGE_LOG_DRY_RUN="changelog-dry-run.md"
-          
           if [[ "$INC" == "AUTO" || -z "$INC" ]]; then
             echo "GET_NEXT=$($CZ_BUMP --get-next)" >> $GITHUB_ENV
-            $CZ_BUMP --dry-run | tee $CHANGE_LOG_DRY_RUN
+            $CZ_BUMP --dry-run | tee $TMP_CHANGE_LOG
           else
             echo GET_NEXT=$($CZ_BUMP --get-next --increment "$INC") >> $GITHUB_ENV
-            $CZ_BUMP --increment "$INC" --dry-run | tee $CHANGE_LOG_DRY_RUN
+            $CZ_BUMP --increment "$INC" --dry-run | tee $TMP_CHANGE_LOG
           fi
 
       - name: Check git tag collision
@@ -96,7 +95,7 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: changelog-dry-run-${{ inputs.package }}.md
-          path: "apps/${{ inputs.package }}/changelog-dry-run.md"
+          path: "apps/${{ inputs.package }}/${{ env.TMP_CHANGE_LOG }}"
 
   release:
     if: ${{ inputs.dry-run == false }}
@@ -130,9 +129,8 @@ jobs:
           INC=${{ inputs.increment }}
           
           if [[ "$INC" == "AUTO" || -z "$INC" ]]; then
-            CHANGE_LOG="changelog.md"
             echo "GET_NEXT=$($CZ_BUMP --get-next)" >> $GITHUB_ENV
-            $CZ_BUMP | tee changelog.md
+            $CZ_BUMP | tee $TMP_CHANGE_LOG
             echo "DETECT_INCREMENT=$(grep -Eo 'MAJOR|MINOR|PATCH' $CHANGE_LOG)" >> $GITHUB_ENV
           else
             echo "GET_NEXT=$($CZ_BUMP --get-next --increment "$INC")" >> $GITHUB_ENV
