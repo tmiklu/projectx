@@ -131,7 +131,7 @@ jobs:
           if [[ "$INC" == "AUTO" || -z "$INC" ]]; then
             echo "GET_NEXT=$($CZ_BUMP --get-next)" >> $GITHUB_ENV
             $CZ_BUMP | tee $TMP_CHANGE_LOG
-            echo "DETECT_INCREMENT=$(grep -Eo 'MAJOR|MINOR|PATCH' $CHANGE_LOG)" >> $GITHUB_ENV
+            echo "DETECT_INCREMENT=$(grep -Eo 'MAJOR|MINOR|PATCH' $TMP_CHANGE_LOG)" >> $GITHUB_ENV
           else
             echo "GET_NEXT=$($CZ_BUMP --get-next --increment "$INC")" >> $GITHUB_ENV
             echo "DETECT_INCREMENT=$INC" >> $GITHUB_ENV
