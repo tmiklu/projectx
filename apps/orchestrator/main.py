@@ -15,7 +15,7 @@ def main():
 
     print("Extend new feature, fix. FIX! Perf, Feat, fix")
 
-    print("breaking change")
+    print("breaking change, fix!")
 
 
 if __name__ == "__main__":
