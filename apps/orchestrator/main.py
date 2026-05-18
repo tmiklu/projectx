@@ -13,7 +13,7 @@ def main():
 
     print("New feature 1.6.0, Fix here! Fix.")
 
-    print("Extend new feature, fix. FIX!")
+    print("Extend new feature, fix. FIX! Perf")
 
     print("breaking change")
 
