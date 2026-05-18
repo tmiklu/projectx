@@ -285,6 +285,16 @@ Released on 2026-05-13
 - add commitizen
 - init projectx
 
+## release/orchestrator/8.3.0
+📅 Released on 2026-05-18
+
+### ✨ Feat
+
+- Update release branch naming convention for tags ([`8d2181e`](https://github.com/tmiklu/projectx/commit/8d2181e60ee475ec22431884b8db46b4180b1057)) 👤 [`tmiklu`](https://github.com/tmiklu)
+- release branch creation in workflow ([`124df55`](https://github.com/tmiklu/projectx/commit/124df559405d91466b7602f79e2dd19386fab06a)) 👤 [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## release/orchestrator/8.2.0
 📅 Released on 2026-05-18
 
