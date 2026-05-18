@@ -1,6 +1,6 @@
 {% set github_url = 'https://github.com' %}
 {% for release in tree %}
-## 🚀 {{ release.version }}
+## {{ release.version }}
 📅 Released on {{ release.date }}
 
 {% for change_type, changes in release.changes.items() %}
