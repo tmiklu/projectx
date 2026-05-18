@@ -285,6 +285,16 @@ Released on 2026-05-13
 - add commitizen
 - init projectx
 
+## 🚀 release/orchestrator/8.0.2
+📅 Released on 2026-05-18
+
+### 🐛 Fix
+
+- echo command for GET_NEXT in release workflow ([`85892b7`](https://github.com/tmiklu/projectx/commit/85892b77e2dfd2128d89930e4a54c8c9ed75ec99)) 👤 [`tmiklu`](https://github.com/tmiklu)
+- Update release workflow to skip changelog generation ([`55ea810`](https://github.com/tmiklu/projectx/commit/55ea8104a9f26c8f69d4d170681fccc068442cd7)) 👤 [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## 🚀 release/orchestrator/8.0.1
 📅 Released on 2026-05-18
 
