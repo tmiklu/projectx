@@ -75,7 +75,7 @@ jobs:
               $CZ_BUMP --dry-run | tee $TMP_CHANGE_LOG
               DETECT_INCREMENT=$(grep -Eo 'MAJOR|MINOR|PATCH' $TMP_CHANGE_LOG)
               if [[ $DETECT_INCREMENT != 'PATCH' }}; then
-                   echo "Detected increment is detected is $DETECT_INCREMENT. Not allowed!"
+                   echo "Detected increment is $DETECT_INCREMENT. Not allowed!"
                    exit 1
               fi
             fi
