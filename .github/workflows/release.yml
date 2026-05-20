@@ -69,15 +69,13 @@ jobs:
         if: ${{ startsWith(github.ref_name, 'release/') || startsWith(github.ref_name, 'fix/') }}
         run: |
           echo "Checking policy for branch: ${{ github.ref_name }} with strategy: $INCREMENT_STRATEGY"
-          
-          if [[ "$BRANCH_NAME" =~ ^release/ || "$BRANCH_NAME" =~ ^fix/ ]]; then
-            if [ "$INCREMENT_STRATEGY" = "auto" ]; then
-              $CZ_BUMP --dry-run | tee $TMP_CHANGE_LOG
-              DETECT_INCREMENT=$(grep -Eo 'MAJOR|MINOR|PATCH' $TMP_CHANGE_LOG)
-              if [[ $DETECT_INCREMENT != 'PATCH' }}; then
-                   echo "Detected increment is $DETECT_INCREMENT. Not allowed!"
-                   exit 1
-              fi
+
+          if [ "$INCREMENT_STRATEGY" = "auto" ]; then
+            $CZ_BUMP --dry-run | tee $TMP_CHANGE_LOG
+            DETECT_INCREMENT=$(grep -Eo 'MAJOR|MINOR|PATCH' $TMP_CHANGE_LOG)
+            if [[ $DETECT_INCREMENT != 'PATCH' }}; then
+              echo "Detected increment is $DETECT_INCREMENT. Not allowed!"
+              exit 1
             fi
           fi
 
