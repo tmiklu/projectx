@@ -68,7 +68,7 @@ jobs:
       - name: "Validate branch policy for hotfixes (prevent accidental minor bump)"
         if: ${{ startsWith(github.ref_name, 'release/') || startsWith(github.ref_name, 'fix/') }}
         run: |
-          echo "Checking policy for branch: ${{ github.ref_name }} with strategy: $INC"
+          echo "Checking policy for branch: ${{ github.ref_name }} with strategy: $INCREMENT_STRATEGY"
           
           if [[ "$BRANCH_NAME" =~ ^release/ || "$BRANCH_NAME" =~ ^fix/ ]]; then
             if [ "$INCREMENT_STRATEGY" = "auto" ]; then
