@@ -48,12 +48,16 @@ env:
   TMP_CHANGE_LOG: "changelog.tmp.md"
   INCREMENT_STRATEGY: "${{ inputs.increment }}"
 
+defaults:
+  run:
+    shell: bash
+
 jobs:    
   validate-release:
     runs-on: ubuntu-latest
     defaults:
       run:
-        shell: bash
+        #shell: bash
         working-directory: "apps/${{ inputs.package }}"
     steps:
       - name: Checkout code
@@ -116,7 +120,7 @@ jobs:
     if: ${{ inputs.dry-run == false }}
     defaults:
       run:
-        shell: bash
+        #shell: bash
         working-directory: "apps/${{ inputs.package }}"
     runs-on: ubuntu-latest
     environment: release
