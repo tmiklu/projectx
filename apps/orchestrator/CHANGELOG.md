@@ -285,6 +285,21 @@ Released on 2026-05-13
 - add commitizen
 - init projectx
 
+## release/orchestrator/9.6.0
+📅 Released on 2026-05-21
+
+### ✨ Feat
+
+- Add default shell configuration for release workflow ([`7fde3e5`](https://github.com/tmiklu/projectx/commit/7fde3e50b409f2be4c1037272f254fc72d6cc7c9)) 👤 [`tmiklu`](https://github.com/tmiklu)
+
+### 🐛 Fix
+
+- syntax error in increment detection condition ([`7e9e9a3`](https://github.com/tmiklu/projectx/commit/7e9e9a3e0f05b7185ce29d91506e6aa2a3db8eb5)) 👤 [`tmiklu`](https://github.com/tmiklu)
+- Simplify hotfix branch policy validation logic ([`e99c4e8`](https://github.com/tmiklu/projectx/commit/e99c4e8bf0eb4b5a43f1c6e986d6c8a585512a1e)) 👤 [`tmiklu`](https://github.com/tmiklu)
+- typo in error message for increment detection ([`d3befad`](https://github.com/tmiklu/projectx/commit/d3befad03fce7ab48c7072811f19750deb8abcf1)) 👤 [`tmiklu`](https://github.com/tmiklu)
+
+
+
 ## release/orchestrator/9.5.0
 📅 Released on 2026-05-18
 
